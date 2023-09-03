@@ -1,10 +1,12 @@
 from views.main_view import MenuView
+from player_controller import PlayerController
 
 
 class MainController:
     def __init__(self):
         self.running = True
         self.menu_view = MenuView()
+        self.player_controller = PlayerController()
 
     def run(self):
         while self.running:
@@ -16,6 +18,7 @@ class MainController:
         if choice == "1":
             self.menu_view.players_manager_menu()
             player_choice = input("Enter your choice: ")
+            self.player_controller.handle_player_menu(player_choice)
         elif choice == "2":
             self.menu_view.event_manager_menu()
         elif choice == "3":
