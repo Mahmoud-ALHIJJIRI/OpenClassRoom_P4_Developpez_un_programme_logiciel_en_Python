@@ -82,8 +82,11 @@ class PlayerController:
     def load_players_from_json():
         players_data = []
 
-        if os.path.exists('Players.json'):
-            with open('Players.json', 'r') as file:
+        file_path = os.path.join('database', 'Players.json')
+        print(f"Loading data from {file_path}")
+
+        if os.path.exists(file_path):
+            with open(file_path, 'r') as file:
                 try:
                     players_data = json.load(file)
                 except json.JSONDecodeError as e:
@@ -102,7 +105,6 @@ class PlayerController:
         folder_path = 'database'
         file_path = os.path.join(folder_path, 'Players.json')
 
-        # Create the 'database' directory if it doesn't exist
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
 
@@ -112,4 +114,4 @@ class PlayerController:
     def list_players(self):
         print("List Players")
         for player in self.players:
-            print(f"ID: {player.chess_id}, Full Name: {player.first_name} {player.last_name}")
+            print(f"ID: {player.chess_id}, Full Name: {player.first_name} {player.last_name}, Score: {player.score}")
