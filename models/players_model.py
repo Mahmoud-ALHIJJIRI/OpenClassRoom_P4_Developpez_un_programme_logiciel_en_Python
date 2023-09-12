@@ -1,17 +1,25 @@
+import datetime
+
+
 class Player:
-    def __init__(self, first_name, last_name, birth_date, chess_id):
+
+    def __init__(self,
+                 first_name: str,
+                 last_name: str,
+                 date_of_birth: datetime,
+                 chess_id: str,
+                 score=0
+                 ):
+        """ Initialize the player. By's attributes"""
         self.first_name = first_name
         self.last_name = last_name
-        self.birth_date = birth_date
+        self.date_of_birth = date_of_birth
         self.chess_id = chess_id
-        self.total_points = 0
+        self.score = score
+        self.opponents = []
 
     def __str__(self):
-        return f"First Name: {self.first_name}\nLast Name: {self.last_name}\nBirth Date: {self.birth_date}\n" \
+        return f"First Name: {self.first_name}, Last Name: {self.last_name}\nBirth Date: {self.date_of_birth}\n" \
                f"ID: {self.chess_id}\n"
 
 
-player1 = Player("Mahmoud", "ALHIJJIRI", "11 March 1990", "AA007")
-
-
-print(player1)
