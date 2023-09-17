@@ -41,22 +41,3 @@ class Tournament:
         self.players[self.players.index(match["player1"])].update_points(score1)
         self.players[self.players.index(match["player2"])].update_points(score2)
 
-
-# Example usage
-if __name__ == "__main__":
-    tournament = Tournament("Chess Tournament", "City Hall", "2023-08-15", "2023-08-20")
-
-    player1 = Player("John", "Doe", "1990-05-15", "AB12345")
-    player2 = Player("Jane", "Smith", "1985-12-10", "CD67890")
-
-    tournament.add_player(player1)
-    tournament.add_player(player2)
-
-    tournament.start_round()
-    tournament.add_match(0, player1, player2)
-    tournament.update_match_score(0, 0, 1, 0.5)
-
-    print(tournament)
-    print(tournament.rounds)
-    print(player1)
-    print(player2)

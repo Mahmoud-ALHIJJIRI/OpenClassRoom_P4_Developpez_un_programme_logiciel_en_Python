@@ -22,5 +22,21 @@
     "chess_id": "AA003",
     "score": 0,
     "opponents": []
+  },
+  {
+    "first_name": "Marah",
+    "last_name": "ALBAYSOUMI",
+    "date_of_birth": "18/02/1997",
+    "chess_id": "AA004",
+    "score": 0,
+    "opponents": []
+  },
+  {
+    "first_name": "Talia ",
+    "last_name": "ALHIJJIRI",
+    "date_of_birth": "14/02/2019",
+    "chess_id": "AA005",
+    "score": 0,
+    "opponents": []
   }
 ]

@@ -2,18 +2,24 @@ class MenuView:
 
     @staticmethod
     def main_view_menu():
-        print("****************", "**# Main Menu #**", "1- Players Manager", "2- Event Manager", "3- Rounds Manager",
+        print("****************", "**# Main Menu #**", "1- Players Manager", "2- Events Manager", "3- Rounds Manager",
               "4- Match Manager", "5- Reports", "0- Exit", "****************", sep="\n")
 
     @staticmethod
     def players_manager_menu():
-        print("****************", "#Player Manager:", "1 - Add Player", "2 - List Players", "3 - Return to Main Menu",
-              "0- Exiting the application.", "****************", sep="\n")
+        print("****************", "#Player Manager:", "1 - Add a new Player", "2 - List Players",
+              "3 - Return to Main Menu", "0- Exiting the application.", "****************", sep="\n")
 
     @staticmethod
     def event_manager_menu():
-        print("****************", "#Event Manager:", "1- Add New Event", "2 - List Event", "3 - Return to Main Menu",
-              "****************", sep="\n")
+        print("****************", "#Events Manager:", "1- Add a New Event", "2- List Events", "3- Manage an Event",
+              "4- Return to Main Menu", "0- Exiting the application.", "****************", sep="\n")
+
+    @staticmethod
+    def one_event_manage_menu():
+        print("1. Add players to the event", "2. View current round",
+              "3. View round list", "4. View registered players", "5. View general notes", "6. View event rounds",
+              "7. Return to the previous menu", sep="\n")
 
     @staticmethod
     def rounds_manager_menu():

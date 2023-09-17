@@ -112,6 +112,10 @@ class PlayerController:
             json.dump(players_data, file, cls=DateEncoder, indent=2)
 
     def list_players(self):
-        print("List Players")
-        for player in self.players:
-            print(f"ID: {player.chess_id}, Full Name: {player.first_name} {player.last_name}, Score: {player.score}")
+        if not self.players:
+            print("No player found.")
+        else:
+            print("Listing Players")
+            for player in self.players:
+                print(f"ID: {player.chess_id}, Full Name: {player.first_name} {player.last_name}, "
+                      f"Score: {player.score}")

@@ -1,5 +1,6 @@
 from views.main_view import MenuView
 from controllers.player_controller import PlayerController
+from controllers.event_controller import EventController
 
 
 class MainController:
@@ -7,6 +8,7 @@ class MainController:
         self.running = True
         self.menu_view = MenuView()
         self.player_controller = PlayerController()
+        self.event_controller = EventController()
 
     def run(self):
         while self.running:
@@ -21,6 +23,8 @@ class MainController:
             self.player_controller.handle_player_menu(player_choice)
         elif choice == "2":
             self.menu_view.event_manager_menu()
+            event_choice = input("Enter your choice: ")
+            self.event_controller.handle_event_menu(event_choice)
         elif choice == "3":
             self.menu_view.rounds_manager_menu()
         elif choice == "4":
