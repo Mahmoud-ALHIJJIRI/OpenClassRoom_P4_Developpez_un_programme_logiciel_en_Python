@@ -4,6 +4,8 @@ import os
 from models.event_model import Event
 from views.main_view import MenuView
 from controllers.player_controller import PlayerController
+from controllers.round_controller import RoundController
+from models.rounds_model import Round
 
 
 class EventController:
@@ -11,6 +13,7 @@ class EventController:
         self.events = self.load_event_from_json()
         self.event_view = MenuView()
         self.players_list = PlayerController()
+        self.rounds = RoundController()
 
     def handle_event_menu(self, event_choice):
 
@@ -161,18 +164,17 @@ class EventController:
                 self.add_players_to_event(selected_event)
                 break
             elif choice == "2":
-                self.view_current_round(selected_event)
-            elif choice == "3":
-                self.view_round_list(selected_event)
-            elif choice == "4":
                 self.list_registered_players(selected_event)
-            elif choice == "5":
+            elif choice == "3":
+                self.manage_rounds(selected_event)
+            elif choice == "4":
                 self.view_general_notes(selected_event)
-            elif choice == "6":
-                self.view_event_rounds(selected_event)
-            elif choice == "7":
+            elif choice == "5":
                 print("Returning to the previous menu")
                 break
+            elif choice == "0":
+                print("Exiting the Application")
+                exit()
             else:
                 print("Invalid choice. Please select a valid option.")
 
@@ -208,12 +210,6 @@ class EventController:
                         print("Player not found in the available players list.")
                     break
 
-    def view_current_round(self, event):
-        pass
-
-    def view_round_list(self, event):
-        pass
-
     def list_registered_players(self, selected_event):
         if not selected_event.event_registered_players:
             print("No players registered for this event.")
@@ -232,6 +228,60 @@ class EventController:
             if player.chess_id == player_id:
                 return player
 
+    def manage_rounds(self, selected_event):
+        self.event_view.rounds_manager_menu()
+        selected_option = input("Enter your choice: ")
+
+        if selected_option == "1":
+            print("Add a new Round to the event")
+            self.add_new_round(selected_event)
+        elif selected_option == "2":
+            print("Listing Event's Rounds")
+            self.list_event_rounds(selected_event)
+        elif selected_option == "3":
+            print("Managing a Round in this Event")
+            self.select_round_to_manage()
+        elif selected_option == "4":
+            print("Returning to Main Menu")
+        elif selected_option == "0":
+            print("Exiting the application")
+            exit()
+        else:
+            print("Invalid choice. Please select a valid option.")
+
+    def add_new_round(self, selected_event):
+        max_rounds = 4
+        round_name_template = "Round {}"
+
+        if len(selected_event.event_round_list) >= max_rounds:
+            print("The maximum number of rounds has been reached.")
+            return
+
+        new_round_name = round_name_template.format(len(selected_event.event_round_list) + 1)
+
+        start_time = datetime.datetime.now()
+        end_time = None
+
+        new_round = Round(new_round_name, start_time, end_time)
+
+        # Add the new round to the event's round list
+        selected_event.event_round_list.append(new_round)
+
+        print(f"New round '{new_round_name}' added to the event.")
+        self.save_event_to_json()
+
+    @staticmethod
+    def list_event_rounds(selected_event):
+        if not selected_event.event_round_list:
+            print("No Rounds entered for this event")
+        else:
+            print(f"List of Rounds for Event '{selected_event.event_name}':")
+            for event_round in selected_event.event_round_list:
+                print(event_round.name)
+
+    def select_round_to_manage(self):
+        pass
+
     @staticmethod
     def view_general_notes(selected_event):
         if selected_event.event_general_notes:
@@ -239,6 +289,3 @@ class EventController:
             print(selected_event.event_general_notes)
         else:
             print(f"No general notes available for Event '{selected_event.event_name}'.")
-
-    def view_event_rounds(self, event):
-        pass

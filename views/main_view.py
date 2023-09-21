@@ -17,13 +17,13 @@ class MenuView:
 
     @staticmethod
     def one_event_manage_menu():
-        print("1. Add players to the event", "2. View current round",
-              "3. View round list", "4. View registered players", "5. View general notes", "6. View event rounds",
-              "7. Return to the previous menu", sep="\n")
+        print("1. Add players to the event", "2. View registered players", "3. View Rounds Manager",
+              "4. View general notes", "5. Return to the previous menu", "0. To Exit the application.", sep="\n")
 
     @staticmethod
     def rounds_manager_menu():
-        pass
+        print("1. Add a new round to the event", "2. List registered rounds", "3. Manage a round in this Event",
+              "4. Return to the previous menu", "0. To Exit the application.", sep="\n")
 
     @staticmethod
     def match_manager_menu():

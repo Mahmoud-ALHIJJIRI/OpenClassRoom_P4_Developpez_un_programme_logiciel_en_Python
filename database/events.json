@@ -5,11 +5,5 @@
     "event_start_date": "2023-07-01",
     "event_end_date": "2023-07-31",
     "event_current_round": 1,
-    "event_round_list": [],
-    "event_registered_players": [
-      "AA001"
-    ],
-    "event_general_notes": "Rafa Nadal",
-    "event_rounds": 4
-  }
-]
+    "event_round_list": [
+      
