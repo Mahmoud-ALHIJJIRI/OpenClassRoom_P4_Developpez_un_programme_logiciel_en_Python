@@ -1,4 +1,7 @@
 import datetime
+from typing import List
+from models.rounds_model import Round
+from models.players_model import Player
 
 
 class Event:
@@ -8,8 +11,8 @@ class Event:
                  event_start_date: datetime,
                  event_end_date: datetime,
                  event_current_round: int,
-                 event_round_list: [],
-                 event_registered_players: [],
+                 event_round_list: List[Round],
+                 event_registered_players: List[Player],
                  event_general_notes: str,
                  event_rounds=4
                  ):

@@ -1,9 +1,36 @@
 [
   {
     "event_name": "Rolland garos",
-    "event_location": "Paris",
+    "event_location": "Paris ",
     "event_start_date": "2023-07-01",
     "event_end_date": "2023-07-31",
     "event_current_round": 1,
+    "event_round_list": [],
+    "event_registered_players": [
+      "AA001",
+      "AA002"
+    ],
+    "event_general_notes": "Rafa Nadal",
+    "event_rounds": 4
+  },
+  {
+    "event_name": "Us open",
+    "event_location": "Ny",
+    "event_start_date": "2023-08-01",
+    "event_end_date": "2023-08-31",
+    "event_current_round": 1,
     "event_round_list": [
-      
+      {
+        "name": "Round 1",
+        "start_time": "2023-07-01 17:00:00",
+        "end_time": "2023-07-31 22:00:00",
+        "matches": []
+      }
+    ],
+    "event_registered_players": [
+      "AA001"
+    ],
+    "event_general_notes": "Djoko",
+    "event_rounds": 4
+  }
+]

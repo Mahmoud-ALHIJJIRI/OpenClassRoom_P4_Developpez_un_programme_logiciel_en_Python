@@ -38,5 +38,13 @@
     "chess_id": "AA005",
     "score": 0,
     "opponents": []
+  },
+  {
+    "first_name": "Mazen",
+    "last_name": "ALSABBAGH",
+    "date_of_birth": "01/01/1965",
+    "chess_id": "AA006",
+    "score": 0,
+    "opponents": []
   }
 ]

@@ -101,24 +101,35 @@ class EventController:
         ]
 
     def save_event_to_json(self):
-        events_data = [
-            {
+        events_data = []
+        folder_path = 'database'
+        file_path = os.path.join(folder_path, 'events.json')
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
+
+        for event in self.events:
+            round_data = []
+            for round_obj in event.event_round_list:
+                round_data.append({
+                    'name': round_obj.name,
+                    'start_time': round_obj.start_time.strftime('%Y-%m-%d %H:%M:%S'),
+                    'end_time': round_obj.end_time.strftime('%Y-%m-%d %H:%M:%S') if round_obj.end_time else None,
+                    'matches': [match.to_dict() for match in round_obj.matches]
+                })
+
+            event_data = {
                 'event_name': event.event_name,
                 'event_location': event.event_location,
                 'event_start_date': event.event_start_date.strftime('%Y-%m-%d'),
                 'event_end_date': event.event_end_date.strftime('%Y-%m-%d'),
                 'event_current_round': event.event_current_round,
-                'event_round_list': event.event_round_list,
+                'event_round_list': round_data,  # Serialize rounds as dictionaries
                 'event_registered_players': event.event_registered_players,
                 'event_general_notes': event.event_general_notes,
                 'event_rounds': event.event_rounds
             }
-            for event in self.events
-        ]
-        folder_path = 'database'
-        file_path = os.path.join(folder_path, 'events.json')
-        if not os.path.exists(folder_path):
-            os.makedirs(folder_path)
+            events_data.append(event_data)
+
         with open(file_path, 'w') as file:
             json.dump(events_data, file, indent=2)
 
@@ -259,15 +270,24 @@ class EventController:
 
         new_round_name = round_name_template.format(len(selected_event.event_round_list) + 1)
 
-        start_time = datetime.datetime.now()
-        end_time = None
+        while True:
+            start_datetime_str = input(
+                f"Enter the start date and time for '{new_round_name}' (DD/MM/YYYY HH:MM): ").strip()
+            end_datetime_str = input(f"Enter the end date and time for '{new_round_name}' (DD/MM/YYYY HH:MM): ").strip()
 
-        new_round = Round(new_round_name, start_time, end_time)
+            try:
+                start_datetime = datetime.datetime.strptime(start_datetime_str, '%d/%m/%Y %H:%M')
+                end_datetime = datetime.datetime.strptime(end_datetime_str, '%d/%m/%Y %H:%M')
+                break
+            except ValueError:
+                print("Invalid date and time format. Please use DD/MM/YYYY HH:MM format.")
+
+        new_round = Round(new_round_name, start_datetime, end_datetime)
 
         # Add the new round to the event's round list
         selected_event.event_round_list.append(new_round)
 
-        print(f"New round '{new_round_name}' added to the event.")
+        print(f"New round '{new_round_name}' has been added to the event.")
         self.save_event_to_json()
 
     @staticmethod
