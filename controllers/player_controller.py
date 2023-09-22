@@ -35,37 +35,60 @@ class PlayerController:
                 break
 
     def add_player(self):
-        print("Add New Player")
-        first_name = input("Enter First Name (or 'exit' to quit): ").capitalize()
-
-        if first_name.lower() == 'exit':
-            exit()
-
-        last_name = input("Enter Last Name (or 'exit' to quit): ").upper()
-
-        if last_name.lower() == 'exit':
-            exit()
-
         while True:
-            birth_date_str = input("Enter Birth Date (dd/mm/yyyy) (or 'exit' to quit): ")
+            print("Add New Player")
+            first_name = input("Enter First Name or( '9' to go to main menu, 'exit' to quit): ").title()
 
-            if birth_date_str.lower() == 'exit':
+            if first_name.lower() == 'exit':
                 exit()
-
-            try:
-                date_of_birth = datetime.datetime.strptime(birth_date_str, '%d/%m/%Y').date()
+            if first_name == '9':
                 break
-            except ValueError:
-                print("Invalid date format. Please use dd/mm/yyyy format.")
 
-        chess_id = self.generate_player_id()
+            last_name = input("Enter Last Name or( '9' to go to main menu, 'exit' to quit): ").upper()
 
-        new_player = Player(first_name, last_name, date_of_birth, chess_id)
-        self.players.append(new_player)
-        self.save_players_to_json()
+            if last_name.lower() == 'exit':
+                exit()
+            if first_name == '9':
+                break
+            date_of_birth = None
+            while True:
+                birth_date_str = input("Enter Birth Date (dd/mm/yyyy) or( '9' to go to main menu, 'exit' to quit): ")
 
-        print(f"The Player:\n{new_player.chess_id} {new_player.first_name} {new_player.last_name} "
-              f"{date_of_birth}\nhas been added successfully!")
+                if birth_date_str.lower() == 'exit':
+                    exit()
+                if birth_date_str == '9':
+                    break
+
+                try:
+                    date_of_birth = datetime.datetime.strptime(birth_date_str, '%d/%m/%Y').date()
+                    break
+                except ValueError:
+                    print("Invalid date format. Please use dd/mm/yyyy format.")
+
+            chess_id = self.generate_player_id()
+
+            new_player = Player(first_name, last_name, date_of_birth, chess_id)
+            self.players.append(new_player)
+            self.save_players_to_json()
+
+            print(f"The Player:\n{new_player.chess_id} {new_player.first_name} {new_player.last_name} "
+                  f"{date_of_birth}\nhas been added successfully!")
+
+            while True:
+                print("Choose an option:")
+                print("1. Add another player")
+                print("2. Return to the main menu")
+
+                choice = input("Enter your choice: ")
+
+                if choice == "1":
+                    # Continue adding another player
+                    break
+                elif choice == "2":
+                    # Return to the main menu
+                    return
+                else:
+                    print("Invalid choice. Please select a valid option.")
 
     def generate_player_id(self):
         existing_ids = [int(player.chess_id[2:]) for player in self.players]

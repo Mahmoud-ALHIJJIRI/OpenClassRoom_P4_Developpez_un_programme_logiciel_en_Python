@@ -8,42 +8,18 @@
     "opponents": []
   },
   {
-    "first_name": "Baraa",
-    "last_name": "ALHAJJIRI",
-    "date_of_birth": "08/03/2023",
+    "first_name": "Marah",
+    "last_name": "ALBAYSOUMI",
+    "date_of_birth": "18/02/1997",
     "chess_id": "AA002",
     "score": 0,
     "opponents": []
   },
   {
-    "first_name": "Cristiano",
-    "last_name": "RONALDO",
-    "date_of_birth": "01/05/1984",
-    "chess_id": "AA003",
-    "score": 0,
-    "opponents": []
-  },
-  {
-    "first_name": "Marah",
-    "last_name": "ALBAYSOUMI",
-    "date_of_birth": "18/02/1997",
-    "chess_id": "AA004",
-    "score": 0,
-    "opponents": []
-  },
-  {
-    "first_name": "Talia ",
+    "first_name": "Talia",
     "last_name": "ALHIJJIRI",
     "date_of_birth": "14/02/2019",
-    "chess_id": "AA005",
-    "score": 0,
-    "opponents": []
-  },
-  {
-    "first_name": "Mazen",
-    "last_name": "ALSABBAGH",
-    "date_of_birth": "01/01/1965",
-    "chess_id": "AA006",
+    "chess_id": "AA003",
     "score": 0,
     "opponents": []
   }

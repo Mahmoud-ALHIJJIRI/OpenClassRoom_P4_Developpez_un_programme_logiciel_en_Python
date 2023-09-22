@@ -1,20 +1,26 @@
 import datetime
-
-
-class Round:
-    def __init__(self, name: str, start_time: datetime, end_time: datetime):
-        self.name = name
-        self.start_time = start_time
-        self.end_time = end_time
-        self.matches = []
-
-    def add_match(self, player1, player2):
-        match = Match(player1, player2)
-        self.matches.append(match)
+from typing import List
 
 
 class Match:
-    def __init__(self, player1, player2):
+    def __init__(self, match_id, player1, player2, result=None):
+        self.match_id = match_id
         self.player1 = player1
         self.player2 = player2
-        self.result = None
+        self.result = result
+
+    def to_dict(self):
+        return {
+            'match_id': self.match_id,
+            'player1': self.player1.to_dict(),
+            'player2': self.player2.to_dict(),
+            'result': self.result
+        }
+
+
+class Round:
+    def __init__(self, name: str, start_time: datetime, end_time: datetime, matches: List[Match]):
+        self.name = name
+        self.start_time = start_time
+        self.end_time = end_time
+        self.matches = matches
