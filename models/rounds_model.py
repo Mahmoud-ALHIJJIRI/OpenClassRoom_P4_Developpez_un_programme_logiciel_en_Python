@@ -3,18 +3,16 @@ from typing import List
 
 
 class Match:
-    def __init__(self, match_id, player1, player2, result=None):
-        self.match_id = match_id
+    def __init__(self, player1, player2, result=None):
         self.player1 = player1
         self.player2 = player2
         self.result = result
 
     def to_dict(self):
         return {
-            'match_id': self.match_id,
             'player1': self.player1.to_dict(),
             'player2': self.player2.to_dict(),
-            'result': self.result
+            'result': self.result.to_dict()
         }
 
 

@@ -8,26 +8,26 @@
     "event_round_list": [
       {
         "name": "Round 1",
-        "start_time": "2023-07-01 17:00:00",
-        "end_time": "2023-07-10 22:00:00",
+        "start_time": "2023-09-23 02:02:06",
+        "end_time": null,
         "matches": []
       },
       {
         "name": "Round 2",
-        "start_time": "2023-07-11 17:00:00",
-        "end_time": "2023-07-20 22:00:00",
+        "start_time": "2023-09-23 02:02:15",
+        "end_time": null,
         "matches": []
       },
       {
         "name": "Round 3",
-        "start_time": "2023-07-21 17:00:00",
-        "end_time": "2023-07-30 22:00:00",
+        "start_time": "2023-09-23 02:02:24",
+        "end_time": null,
         "matches": []
       },
       {
         "name": "Round 4",
-        "start_time": "2023-07-31 17:00:00",
-        "end_time": "2023-07-31 22:00:00",
+        "start_time": "2023-09-23 02:02:27",
+        "end_time": null,
         "matches": []
       }
     ],
@@ -55,6 +55,14 @@
         "chess_id": "AA003",
         "score": 0,
         "opponents": []
+      },
+      {
+        "first_name": "Rafa",
+        "last_name": "NADAL",
+        "date_of_birth": "01/01/1984",
+        "chess_id": "AA004",
+        "score": 0,
+        "opponents": []
       }
     ],
     "event_general_notes": "Rafa Nadal",
@@ -69,6 +77,17 @@
     "event_round_list": [],
     "event_registered_players": [],
     "event_general_notes": "Roger fedrer",
+    "event_rounds": 4
+  },
+  {
+    "event_name": "Chp",
+    "event_location": "Istanbul",
+    "event_start_date": "2023-10-01",
+    "event_end_date": "2023-10-31",
+    "event_current_round": 1,
+    "event_round_list": [],
+    "event_registered_players": [],
+    "event_general_notes": "nothing",
     "event_rounds": 4
   }
 ]

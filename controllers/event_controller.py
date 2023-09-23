@@ -248,6 +248,7 @@ class EventController:
                 break
             elif choice == "4":
                 self.view_general_notes(selected_event)
+                break
             elif choice == "5":
                 print("Returning to the previous menu")
                 break
@@ -321,15 +322,16 @@ class EventController:
 
             if selected_option == "1":
                 print("Add a new Round to the event")
-                self.add_new_round(selected_event)
+                self.rounds.add_new_round(selected_event)
+                self.save_event_to_json()
                 break
             elif selected_option == "2":
                 print("Listing Event's Rounds")
-                self.list_event_rounds(selected_event)
+                self.rounds.list_event_rounds(selected_event)
                 break
             elif selected_option == "3":
                 print("Managing a Round in this Event")
-                self.select_round_to_manage()
+                self.rounds.select_round_to_manage(selected_event)
             elif selected_option == "4":
                 print("Returning to Main Menu")
             elif selected_option == "0":
@@ -337,61 +339,6 @@ class EventController:
                 exit()
             else:
                 print("Invalid choice. Please select a valid option.")
-
-    def add_new_round(self, selected_event):
-        max_rounds = 4
-        round_name_template = "Round {}"
-
-        while len(selected_event.event_round_list) < max_rounds:
-            new_round_name = round_name_template.format(len(selected_event.event_round_list) + 1)
-
-            while True:
-                start_datetime_str = input(
-                    f"Enter the start date and time for '{new_round_name}' (DD/MM/YYYY HH:MM): ").strip()
-                try:
-                    start_datetime = datetime.datetime.strptime(start_datetime_str, '%d/%m/%Y %H:%M')
-
-                    end_datetime_str = input(
-                        f"Enter the end date and time for '{new_round_name}' (DD/MM/YYYY HH:MM): ").strip()
-                    try:
-                        end_datetime = datetime.datetime.strptime(end_datetime_str, '%d/%m/%Y %H:%M')
-                        break
-                    except ValueError:
-                        print("Invalid date and time format. Please use DD/MM/YYYY HH:MM format.")
-                except ValueError:
-                    print("Invalid date and time format. Please use DD/MM/YYYY HH:MM format.")
-
-            new_round = Round(new_round_name, start_datetime, end_datetime, matches=[])
-
-            # Add the new round to the event's round list
-            selected_event.event_round_list.append(new_round)
-
-            print(f"New round '{new_round_name}' has been added to the event.")
-
-            choice = input(
-                "Choose an option:\n1. Add another Round to the Event\n2. Return to the main menu\nEnter your choice: ")
-
-            if choice == "2":
-                break
-            elif choice != "1":
-                print("Invalid choice. Please select a valid option.")
-        else:
-            print("The maximum number of rounds has been reached")
-
-        self.save_event_to_json()
-
-    @staticmethod
-    def list_event_rounds(selected_event):
-        if not selected_event.event_round_list:
-            print("No Rounds entered for this event")
-        else:
-            print(f"List of Rounds for Event '{selected_event.event_name}':")
-            for event_round in selected_event.event_round_list:
-                print(f"The Round: {event_round.name} - Start Time: {event_round.start_time} - "
-                      f"End Time: {event_round.end_time}")
-
-    def select_round_to_manage(self):
-        pass
 
     @staticmethod
     def view_general_notes(selected_event):

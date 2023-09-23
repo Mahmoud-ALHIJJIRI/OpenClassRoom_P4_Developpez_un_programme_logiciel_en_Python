@@ -22,5 +22,13 @@
     "chess_id": "AA003",
     "score": 0,
     "opponents": []
+  },
+  {
+    "first_name": "Rafa",
+    "last_name": "NADAL",
+    "date_of_birth": "01/01/1984",
+    "chess_id": "AA004",
+    "score": 0,
+    "opponents": []
   }
 ]
