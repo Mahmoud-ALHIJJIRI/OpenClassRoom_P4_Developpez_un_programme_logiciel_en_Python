@@ -30,5 +30,37 @@
     "chess_id": "AA004",
     "score": 0,
     "opponents": []
+  },
+  {
+    "first_name": "Amir",
+    "last_name": "ALHARACH",
+    "date_of_birth": "01/05/1986",
+    "chess_id": "AA005",
+    "score": 0,
+    "opponents": []
+  },
+  {
+    "first_name": "Loulia",
+    "last_name": "ALHIJJIRI",
+    "date_of_birth": "11/11/2021",
+    "chess_id": "AA006",
+    "score": 0,
+    "opponents": []
+  },
+  {
+    "first_name": "Roger",
+    "last_name": "FEDRER",
+    "date_of_birth": "01/01/1980",
+    "chess_id": "AA007",
+    "score": 0,
+    "opponents": []
+  },
+  {
+    "first_name": "Cristiano",
+    "last_name": "RONALDO",
+    "date_of_birth": "12/04/1984",
+    "chess_id": "AA008",
+    "score": 0,
+    "opponents": []
   }
 ]

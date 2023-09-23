@@ -1,12 +1,13 @@
 import datetime
 import json
 import os
-from models.event_model import Event
 from views.main_view import MenuView
 from controllers.player_controller import PlayerController
 from controllers.round_controller import RoundController
+from controllers.matchs_controller import MatchesController
 from models.rounds_model import Round
 from models.players_model import Player
+from models.event_model import Event
 
 
 class EventController:
@@ -15,6 +16,7 @@ class EventController:
         self.event_view = MenuView()
         self.players_list = PlayerController()
         self.rounds = RoundController()
+        self.matches = MatchesController()
 
     def handle_event_menu(self, event_choice):
 
@@ -170,7 +172,7 @@ class EventController:
         for event in self.events:
             round_data = []
             for round_obj in event.event_round_list:
-                matches_data = [match.to_dict() for match in round_obj.matches]
+                matches_data = [match.to_dict() for match in round_obj.matches if match is not None]
                 round_data.append({
                     'name': round_obj.name,
                     'start_time': round_obj.start_time.strftime("%H:%M 'on' %d-%m-%Y"),
@@ -331,7 +333,7 @@ class EventController:
                 break
             elif selected_option == "3":
                 print("Managing a Round in this Event")
-                self.rounds.select_round_to_manage(selected_event)
+                self.matches.select_round_to_manage(selected_event)
             elif selected_option == "4":
                 print("Returning to Main Menu")
             elif selected_option == "0":

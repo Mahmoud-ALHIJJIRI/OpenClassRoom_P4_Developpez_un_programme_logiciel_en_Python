@@ -8,19 +8,94 @@
     "event_round_list": [
       {
         "name": "Round 1",
-        "start_time": "20:57 'on' 23-09-2023",
-        "end_time": "20:57 'on' 23-09-2023",
-        "matches": []
+        "start_time": "01:46 'on' 24-09-2023",
+        "end_time": "01:46 'on' 24-09-2023",
+        "matches": [
+          {
+            "match_id": "Rolland Garros  - Round1 - M01",
+            "player1": {
+              "first_name": "Marah",
+              "last_name": "ALBAYSOUMI",
+              "date_of_birth": "18/02/1997",
+              "chess_id": "AA002",
+              "score": 0,
+              "opponents": []
+            },
+            "player2": {
+              "first_name": "Mahmoud",
+              "last_name": "ALHIJJIRI",
+              "date_of_birth": "11/03/1990",
+              "chess_id": "AA001",
+              "score": 0,
+              "opponents": []
+            },
+            "result": null
+          },
+          {
+            "match_id": "Rolland Garros  - Round1 - M02",
+            "player1": {
+              "first_name": "Amir",
+              "last_name": "ALHARACH",
+              "date_of_birth": "01/05/1986",
+              "chess_id": "AA005",
+              "score": 0,
+              "opponents": []
+            },
+            "player2": {
+              "first_name": "Rafa",
+              "last_name": "NADAL",
+              "date_of_birth": "01/01/1984",
+              "chess_id": "AA004",
+              "score": 0,
+              "opponents": []
+            },
+            "result": null
+          },
+          {
+            "match_id": "Rolland Garros  - Round1 - M03",
+            "player1": {
+              "first_name": "Loulia",
+              "last_name": "ALHIJJIRI",
+              "date_of_birth": "11/11/2021",
+              "chess_id": "AA006",
+              "score": 0,
+              "opponents": []
+            },
+            "player2": {
+              "first_name": "Roger",
+              "last_name": "FEDRER",
+              "date_of_birth": "01/01/1980",
+              "chess_id": "AA007",
+              "score": 0,
+              "opponents": []
+            },
+            "result": null
+          },
+          {
+            "match_id": "Rolland Garros  - Round1 - M04",
+            "player1": {
+              "first_name": "Talia",
+              "last_name": "ALHIJJIRI",
+              "date_of_birth": "14/02/2019",
+              "chess_id": "AA003",
+              "score": 0,
+              "opponents": []
+            },
+            "player2": {
+              "first_name": "Cristiano",
+              "last_name": "RONALDO",
+              "date_of_birth": "12/04/1984",
+              "chess_id": "AA008",
+              "score": 0,
+              "opponents": []
+            },
+            "result": null
+          }
+        ]
       },
       {
         "name": "Round 2",
-        "start_time": "20:57 'on' 23-09-2023",
-        "end_time": "20:57 'on' 23-09-2023",
-        "matches": []
-      },
-      {
-        "name": "Round 3",
-        "start_time": "20:57 'on' 23-09-2023",
+        "start_time": "01:46 'on' 24-09-2023",
         "end_time": null,
         "matches": []
       }
@@ -31,6 +106,62 @@
         "last_name": "ALHIJJIRI",
         "date_of_birth": "11/03/1990",
         "chess_id": "AA001",
+        "score": 0,
+        "opponents": []
+      },
+      {
+        "first_name": "Marah",
+        "last_name": "ALBAYSOUMI",
+        "date_of_birth": "18/02/1997",
+        "chess_id": "AA002",
+        "score": 0,
+        "opponents": []
+      },
+      {
+        "first_name": "Talia",
+        "last_name": "ALHIJJIRI",
+        "date_of_birth": "14/02/2019",
+        "chess_id": "AA003",
+        "score": 0,
+        "opponents": []
+      },
+      {
+        "first_name": "Rafa",
+        "last_name": "NADAL",
+        "date_of_birth": "01/01/1984",
+        "chess_id": "AA004",
+        "score": 0,
+        "opponents": []
+      },
+      {
+        "first_name": "Amir",
+        "last_name": "ALHARACH",
+        "date_of_birth": "01/05/1986",
+        "chess_id": "AA005",
+        "score": 0,
+        "opponents": []
+      },
+      {
+        "first_name": "Loulia",
+        "last_name": "ALHIJJIRI",
+        "date_of_birth": "11/11/2021",
+        "chess_id": "AA006",
+        "score": 0,
+        "opponents": []
+      },
+      {
+        "first_name": "Roger",
+        "last_name": "FEDRER",
+        "date_of_birth": "01/01/1980",
+        "chess_id": "AA007",
+        "score": 0,
+        "opponents": []
+      },
+      {
+        "first_name": "Cristiano",
+        "last_name": "RONALDO",
+        "date_of_birth": "12/04/1984",
+        "chess_id": "AA008",
         "score": 0,
         "opponents": []
       }
