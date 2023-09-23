@@ -1,32 +1,26 @@
 [
   {
-    "event_name": "Rolland Garos",
+    "event_name": "Rolland Garros ",
     "event_location": "Paris",
-    "event_start_date": "2023-07-01",
-    "event_end_date": "2023-07-31",
+    "event_start_date": "01-07-2023",
+    "event_end_date": "31-07-2023",
     "event_current_round": 1,
     "event_round_list": [
       {
         "name": "Round 1",
-        "start_time": "2023-09-23 02:02:06",
-        "end_time": null,
+        "start_time": "20:57 'on' 23-09-2023",
+        "end_time": "20:57 'on' 23-09-2023",
         "matches": []
       },
       {
         "name": "Round 2",
-        "start_time": "2023-09-23 02:02:15",
-        "end_time": null,
+        "start_time": "20:57 'on' 23-09-2023",
+        "end_time": "20:57 'on' 23-09-2023",
         "matches": []
       },
       {
         "name": "Round 3",
-        "start_time": "2023-09-23 02:02:24",
-        "end_time": null,
-        "matches": []
-      },
-      {
-        "name": "Round 4",
-        "start_time": "2023-09-23 02:02:27",
+        "start_time": "20:57 'on' 23-09-2023",
         "end_time": null,
         "matches": []
       }
@@ -39,55 +33,39 @@
         "chess_id": "AA001",
         "score": 0,
         "opponents": []
-      },
-      {
-        "first_name": "Marah",
-        "last_name": "ALBAYSOUMI",
-        "date_of_birth": "18/02/1997",
-        "chess_id": "AA002",
-        "score": 0,
-        "opponents": []
-      },
-      {
-        "first_name": "Talia",
-        "last_name": "ALHIJJIRI",
-        "date_of_birth": "14/02/2019",
-        "chess_id": "AA003",
-        "score": 0,
-        "opponents": []
-      },
-      {
-        "first_name": "Rafa",
-        "last_name": "NADAL",
-        "date_of_birth": "01/01/1984",
-        "chess_id": "AA004",
-        "score": 0,
-        "opponents": []
       }
     ],
     "event_general_notes": "Rafa Nadal",
     "event_rounds": 4
   },
   {
-    "event_name": "Wimbeldon",
-    "event_location": "London",
-    "event_start_date": "2023-08-01",
-    "event_end_date": "2023-08-31",
+    "event_name": "Us Open",
+    "event_location": "Newyork City",
+    "event_start_date": "01-08-2023",
+    "event_end_date": "31-08-2023",
     "event_current_round": 1,
-    "event_round_list": [],
+    "event_round_list": [
+      {
+        "name": "Round 1",
+        "start_time": "20:57 'on' 23-09-2023",
+        "end_time": "20:58 'on' 23-09-2023",
+        "matches": []
+      },
+      {
+        "name": "Round 2",
+        "start_time": "20:58 'on' 23-09-2023",
+        "end_time": "20:58 'on' 23-09-2023",
+        "matches": []
+      },
+      {
+        "name": "Round 3",
+        "start_time": "20:58 'on' 23-09-2023",
+        "end_time": null,
+        "matches": []
+      }
+    ],
     "event_registered_players": [],
-    "event_general_notes": "Roger fedrer",
-    "event_rounds": 4
-  },
-  {
-    "event_name": "Chp",
-    "event_location": "Istanbul",
-    "event_start_date": "2023-10-01",
-    "event_end_date": "2023-10-31",
-    "event_current_round": 1,
-    "event_round_list": [],
-    "event_registered_players": [],
-    "event_general_notes": "nothing",
+    "event_general_notes": "Djoko",
     "event_rounds": 4
   }
 ]

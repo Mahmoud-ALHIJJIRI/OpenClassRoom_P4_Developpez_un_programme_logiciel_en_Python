@@ -22,8 +22,9 @@ class MenuView:
 
     @staticmethod
     def rounds_manager_menu():
-        print("1. Add a new round to the event", "2. List registered rounds", "3. Manage a round in this Event",
-              "4. Return to the previous menu", "0. To Exit the application.", sep="\n")
+        print("1. Terminate Current Round and Start a new Round", "2. List registered rounds",
+              "3. Manage a round in this Event", "4. Return to the previous menu",
+              "0. To Exit the application.", sep="\n")
 
     @staticmethod
     def match_manager_menu():

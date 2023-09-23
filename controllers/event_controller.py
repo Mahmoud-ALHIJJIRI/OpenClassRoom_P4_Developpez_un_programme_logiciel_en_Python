@@ -120,8 +120,8 @@ class EventController:
             event = Event(
                 event_name=event_data['event_name'],
                 event_location=event_data['event_location'],
-                event_start_date=datetime.datetime.strptime(event_data['event_start_date'], '%Y-%m-%d').date(),
-                event_end_date=datetime.datetime.strptime(event_data['event_end_date'], '%Y-%m-%d').date(),
+                event_start_date=datetime.datetime.strptime(event_data['event_start_date'], '%d-%m-%Y').date(),
+                event_end_date=datetime.datetime.strptime(event_data['event_end_date'], '%d-%m-%Y').date(),
                 event_current_round=event_data['event_current_round'],
                 event_round_list=event_data['event_round_list'],
                 event_registered_players=event_data['event_registered_players'],
@@ -134,8 +134,8 @@ class EventController:
             for round_data in round_data_list:
                 round_obj = Round(
                     name=round_data['name'],
-                    start_time=datetime.datetime.strptime(round_data['start_time'], '%Y-%m-%d %H:%M:%S'),
-                    end_time=datetime.datetime.strptime(round_data['end_time'], '%Y-%m-%d %H:%M:%S') if round_data[
+                    start_time=datetime.datetime.strptime(round_data['start_time'], "%H:%M 'on' %d-%m-%Y"),
+                    end_time=datetime.datetime.strptime(round_data['end_time'], "%H:%M 'on' %d-%m-%Y") if round_data[
                         'end_time'] else None,
                     matches=[]
                 )
@@ -173,8 +173,8 @@ class EventController:
                 matches_data = [match.to_dict() for match in round_obj.matches]
                 round_data.append({
                     'name': round_obj.name,
-                    'start_time': round_obj.start_time.strftime('%Y-%m-%d %H:%M:%S'),
-                    'end_time': round_obj.end_time.strftime('%Y-%m-%d %H:%M:%S') if round_obj.end_time else None,
+                    'start_time': round_obj.start_time.strftime("%H:%M 'on' %d-%m-%Y"),
+                    'end_time': round_obj.end_time.strftime("%H:%M 'on' %d-%m-%Y") if round_obj.end_time else None,
                     'matches': matches_data
                 })
 
@@ -183,8 +183,8 @@ class EventController:
             event_data = {
                 'event_name': event.event_name,
                 'event_location': event.event_location,
-                'event_start_date': event.event_start_date.strftime('%Y-%m-%d'),
-                'event_end_date': event.event_end_date.strftime('%Y-%m-%d'),
+                'event_start_date': event.event_start_date.strftime('%d-%m-%Y'),
+                'event_end_date': event.event_end_date.strftime('%d-%m-%Y'),
                 'event_current_round': event.event_current_round,
                 'event_round_list': round_data,  # Serialize rounds as dictionaries
                 'event_registered_players': players_data,

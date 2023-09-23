@@ -8,7 +8,8 @@ class RoundController:
     def __init__(self):
         self.event_view = MenuView()
 
-    def add_new_round(self, selected_event):
+    @staticmethod
+    def add_new_round(selected_event):
         round_name_template = "Round {}"
 
         current_round_terminated = True  # Initially, no round is in progress
@@ -16,6 +17,10 @@ class RoundController:
 
         new_round = None  # Initialize new_round outside the if block
         new_round_name = ""  # Initialize new_round_name with a default value
+
+        if len(selected_event.event_round_list) > 0:
+            current_round_number = len(selected_event.event_round_list) + 1
+            print(f"The current round ({current_round_number}) has been terminated.")
 
         while True:
             if len(selected_event.event_round_list) >= max_rounds:
@@ -37,7 +42,8 @@ class RoundController:
                     # Add the new round to the event's round list
                     selected_event.event_round_list.append(new_round)
 
-                    print(f"New round '{new_round_name}' has been started {start_datetime} to the event.")
+                    print(f"New round '{new_round_name}' has been started at "
+                          f"{start_datetime.strftime('%H:%M on %d-%m-%Y')} in the event {selected_event.event_name}.")
                     current_round_terminated = False  # Set the flag to indicate that a round is in progress
 
             choice = input(
@@ -45,15 +51,14 @@ class RoundController:
                 "\n2. Return to the main menu\nEnter your choice: ")
 
             if choice == "1":
+                new_round.end_time = datetime.datetime.now()
+                print(f"Round '{new_round_name}' has been terminated at "
+                      f"{new_round.end_time.strftime('%H:%M on %d-%m-%Y')}.")
                 current_round_terminated = True
             elif choice == "2":
                 break
             else:
                 print("Invalid choice. Please select a valid option.")
-            new_round.end_datetime = datetime.datetime.now()
-            print(f"Round '{new_round_name}' has been terminated.")
-
-            self.generate_matches(selected_event)
 
     @staticmethod
     def generate_matches(selected_event):
@@ -141,5 +146,12 @@ class RoundController:
         else:
             print(f"List of Rounds for Event '{selected_event.event_name}':")
             for event_round in selected_event.event_round_list:
-                print(f"The Round: {event_round.name} - Start Time: {event_round.start_time} - "
-                      f"End Time: {event_round.end_time}")
+                start_time_str = event_round.start_time.strftime('%H:%M on %d-%m-%Y')
+                if event_round.end_time is not None:
+                    end_time_str = event_round.end_time.strftime('%H:%M on %d-%m-%Y')
+                else:
+                    end_time_str = "This Round is still going on!"
+
+                print(f"The Round: {event_round.name} - "
+                      f"Start Time: {start_time_str} - "
+                      f"End Time: {end_time_str}")
