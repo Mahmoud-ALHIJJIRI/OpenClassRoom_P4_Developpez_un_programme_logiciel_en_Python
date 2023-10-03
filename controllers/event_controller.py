@@ -170,7 +170,18 @@ class EventController:
             os.makedirs(folder_path)
         events_data = []
         for event in self.events:
-            players_data = [player.to_dict() for player in event.event_registered_players]
+            players_data = [
+                {
+                    'chess_id': player.chess_id,
+                    'first_name': player.first_name,
+                    'last_name': player.last_name,
+                    'date_of_birth': player.date_of_birth,
+                    'opponents': [opponent.chess_id for opponent in player.opponents],  # Include opponent IDs
+                    'score': player.score
+                }
+                for player in event.event_registered_players
+            ]
+
             round_data = []
             for round_obj in event.event_round_list:
                 matches_data = [match.to_dict() for match in round_obj.matches if match is not None]

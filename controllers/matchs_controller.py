@@ -25,21 +25,25 @@ class MatchesController:
                     sorted_players) else None  # Handles odd number of players
                 match = Match(match_id, player1, player2)
                 matches.append(match)
-                match.player1.opponents.append(match.player2)
+
+                player1.opponents.append(player2)
+                player2.opponents.append(player1)
+
+                player1_info = f"{player1.chess_id} {player1.first_name} {player1.last_name}"
+                player2_info = f"{player2.chess_id} {player2.first_name} {player2.last_name}" \
+                    if player2 else "No opponent"
                 match_counter += 1  # Increment by 1 to generate both even and odd match IDs
+                selected_event.event_round_list[round_number - 1].matches.append(match)
                 # Display match details before prompting the user to select the winner
-                print(f"Match ID: {match.match_id}")
-                print(f"Player 1: {match.player1.chess_id} {match.player1.first_name} {match.player1.last_name}")
-                if match.player2:
-                    print(f"Player 2: {match.player2.chess_id} {match.player2.first_name} {match.player2.last_name}")
-                else:
-                    print("Player 2: no available opponent")  # Handle cases where there's no opponent
+                print(f"{match_id}", f"{player1_info}", f"{player2_info}", sep='\n')
 
                 # Prompt the user to select the winner (1 for player 1, 2 for player 2, 3 for a draw)
                 winner_input = input(
                     f"Select the winner (1 for {match.player1.chess_id} {match.player1.first_name}, "
                     f"2 for {match.player2.chess_id} {match.player2.first_name},"
-                    f" 3 for a draw): ")
+                    f" 3 for a draw): "
+                    "Or (9 to return, 0 to exit the application) : "
+                )
                 if winner_input == "1":
                     match.result = f"1-0"
                     match.player1.score += 1
@@ -50,6 +54,10 @@ class MatchesController:
                     match.result = f"0.5-0.5"
                     match.player1.score += 0.5
                     match.player2.score += 0.5
+                elif winner_input == "9":
+                    break
+                elif winner_input == "0":
+                    exit()
                 else:
                     print("Invalid input. Please enter 1, 2, or 3 to select the winner.")
                     # You can add error handling or prompt again if the input is invalid.
