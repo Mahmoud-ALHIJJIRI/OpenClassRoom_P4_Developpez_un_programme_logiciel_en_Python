@@ -153,6 +153,7 @@ class EventController:
                     last_name=player_data['last_name'],
                     date_of_birth=player_data['date_of_birth'],
                     chess_id=player_data['chess_id'],
+                    opponents=[],
                     score=player_data['score']
                 )
                 players.append(player)
@@ -163,13 +164,13 @@ class EventController:
         return events
 
     def save_event_to_json(self):
-        events_data = []
         folder_path = 'database'
         file_path = os.path.join(folder_path, 'events.json')
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
-
+        events_data = []
         for event in self.events:
+            players_data = [player.to_dict() for player in event.event_registered_players]
             round_data = []
             for round_obj in event.event_round_list:
                 matches_data = [match.to_dict() for match in round_obj.matches if match is not None]
@@ -179,9 +180,6 @@ class EventController:
                     'end_time': round_obj.end_time.strftime("%H:%M 'on' %d-%m-%Y") if round_obj.end_time else None,
                     'matches': matches_data
                 })
-
-            players_data = [player.to_dict() for player in event.event_registered_players]
-
             event_data = {
                 'event_name': event.event_name,
                 'event_location': event.event_location,
@@ -246,12 +244,16 @@ class EventController:
                 self.list_registered_players(selected_event)
                 break
             elif choice == "3":
-                self.manage_rounds(selected_event)
+                self.rounds.add_new_round(selected_event)
+                self.save_event_to_json()
                 break
             elif choice == "4":
+                print("Listing Event's Rounds")
+                self.rounds.list_event_rounds(selected_event)
+            elif choice == "5":
                 self.view_general_notes(selected_event)
                 break
-            elif choice == "5":
+            elif choice == "9":
                 print("Returning to the previous menu")
                 break
             elif choice == "0":
@@ -267,6 +269,15 @@ class EventController:
             if not players_available:
                 print("No Players available to add!")
                 return  # Exit the method if no players are available
+
+            # Exclude the players already added to the event
+            players_available = [player for player in players_available
+                                 if player.chess_id not in
+                                 [player.chess_id for player in selected_event.event_registered_players]]
+
+            if not players_available:
+                print("All Players available are already in the event.")
+                return
 
             print("Here are the players available to add:")
             print()
@@ -316,31 +327,6 @@ class EventController:
             print("List of Registered Players for Event:")
             for player in selected_event.event_registered_players:
                 print(f"Player ID: {player.chess_id}, Name: {player.first_name} {player.last_name}")
-
-    def manage_rounds(self, selected_event):
-        while True:
-            self.event_view.rounds_manager_menu()
-            selected_option = input("Enter your choice: ")
-
-            if selected_option == "1":
-                print("Add a new Round to the event")
-                self.rounds.add_new_round(selected_event)
-                self.save_event_to_json()
-                break
-            elif selected_option == "2":
-                print("Listing Event's Rounds")
-                self.rounds.list_event_rounds(selected_event)
-                break
-            elif selected_option == "3":
-                print("Managing a Round in this Event")
-                self.matches.select_round_to_manage(selected_event)
-            elif selected_option == "4":
-                print("Returning to Main Menu")
-            elif selected_option == "0":
-                print("Exiting the application")
-                exit()
-            else:
-                print("Invalid choice. Please select a valid option.")
 
     @staticmethod
     def view_general_notes(selected_event):

@@ -1,64 +1,64 @@
 [
   {
-    "first_name": "Mahmoud",
-    "last_name": "ALHIJJIRI",
-    "date_of_birth": "11/03/1990",
+    "first_name": "Cristiano",
+    "last_name": "RONALDO",
+    "date_of_birth": "01/05/1984",
     "chess_id": "AA001",
     "score": 0,
     "opponents": []
   },
   {
-    "first_name": "Marah",
-    "last_name": "ALBAYSOUMI",
-    "date_of_birth": "18/02/1997",
+    "first_name": "Sergio",
+    "last_name": "RAMOS",
+    "date_of_birth": "01/06/1985",
     "chess_id": "AA002",
     "score": 0,
     "opponents": []
   },
   {
-    "first_name": "Talia",
-    "last_name": "ALHIJJIRI",
-    "date_of_birth": "14/02/2019",
+    "first_name": "Iker",
+    "last_name": "CASSILLAS ",
+    "date_of_birth": "01/01/1980",
     "chess_id": "AA003",
     "score": 0,
     "opponents": []
   },
   {
-    "first_name": "Rafa",
-    "last_name": "NADAL",
-    "date_of_birth": "01/01/1984",
+    "first_name": "Masut",
+    "last_name": "OZEL",
+    "date_of_birth": "01/01/1982",
     "chess_id": "AA004",
     "score": 0,
     "opponents": []
   },
   {
-    "first_name": "Amir",
-    "last_name": "ALHARACH",
-    "date_of_birth": "01/05/1986",
+    "first_name": "Xabi",
+    "last_name": "ALONSO",
+    "date_of_birth": "01/05/1981",
     "chess_id": "AA005",
     "score": 0,
     "opponents": []
   },
   {
-    "first_name": "Loulia",
-    "last_name": "ALHIJJIRI",
-    "date_of_birth": "11/11/2021",
+    "first_name": "Angel",
+    "last_name": "DI MARIA",
+    "date_of_birth": "01/01/1985",
     "chess_id": "AA006",
     "score": 0,
     "opponents": []
   },
   {
-    "first_name": "Roger",
-    "last_name": "FEDRER",
-    "date_of_birth": "01/01/1980",
+    "first_name": "Luka",
+    "last_name": "MODRIC",
+    "date_of_birth": "01/01/1984",
     "chess_id": "AA007",
     "score": 0,
     "opponents": []
   },
   {
-    "first_name": "Cristiano",
-    "last_name": "RONALDO",
-    "date_of_birth": "12/04/1984",
+    "first_name": "Dani",
+    "last_name": "CARVAJAL",
+    "date_of_birth": "11/01/1992",
     "chess_id": "AA008",
     "score": 0,
     "opponents": []

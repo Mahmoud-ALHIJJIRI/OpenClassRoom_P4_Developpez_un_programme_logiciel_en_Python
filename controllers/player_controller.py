@@ -67,7 +67,7 @@ class PlayerController:
 
             chess_id = self.generate_player_id()
 
-            new_player = Player(first_name, last_name, date_of_birth, chess_id)
+            new_player = Player(first_name, last_name, date_of_birth, chess_id, opponents=[])
             self.players.append(new_player)
             self.save_players_to_json()
 
@@ -120,8 +120,10 @@ class PlayerController:
             last_name=player_data.get('last_name', ''),
             date_of_birth=player_data.get('date_of_birth', datetime.date.today()),
             chess_id=player_data.get('chess_id', ''),
+            opponents=[],
             score=player_data.get('score', 0),
-        ) for player_data in players_data]
+        )
+            for player_data in players_data]
 
     def save_players_to_json(self):
         players_data = [player.__dict__ for player in self.players]

@@ -17,14 +17,14 @@ class MenuView:
 
     @staticmethod
     def one_event_manage_menu():
-        print("1. Add players to the event", "2. View registered players", "3. View Rounds Manager",
-              "4. View general notes", "5. Return to the previous menu", "0. To Exit the application.", sep="\n")
+        print("1. Add players to the event", "2. View registered players", "3. Add a new Round to the event",
+              "4. Listing Event's Rounds", "5. Event's General Notes: ",
+              "9. Return to the previous menu", "0. To Exit the application.", sep="\n")
 
     @staticmethod
     def rounds_manager_menu():
         print("1. Terminate Current Round and Start a new Round", "2. List registered rounds",
-              "3. Manage a round in this Event", "4. Return to the previous menu",
-              "0. To Exit the application.", sep="\n")
+              "9. Return to the previous menu", "0. To Exit the application.", sep="\n")
 
     @staticmethod
     def match_manager_menu():
@@ -37,6 +37,13 @@ class MenuView:
               "2- List of all tournaments.", "3- Name and dates of a given tournament.",
               "4- List of players in the tournament in alphabetical order.",
               "5- List of all rounds in the tournament and all matches in the round.", "****************", sep="\n")
+
+    @staticmethod
+    def round_options():
+        print("            Choose an option:",
+              "1. Terminate current Round and start next Round",
+              "9. Return to the main menu to stay in this round",
+              "0. To quite the application without saving the new change to Rounds", sep="\n            ")
 
     def print_all_menus(self):
         self.main_view_menu()
