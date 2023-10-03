@@ -5,124 +5,30 @@
     "event_start_date": "01-07-2023",
     "event_end_date": "31-07-2023",
     "event_current_round": 1,
-    "event_round_list": [
-      {
-        "name": "Round 1",
-        "start_time": "19:09 'on' 03-10-2023",
-        "end_time": null,
-        "matches": [
-          {
-            "match_id": "Roland Garros - Round 1 - M01",
-            "player1": {
-              "first_name": "Cristiano",
-              "last_name": "RONALDO",
-              "date_of_birth": "01/05/1984",
-              "chess_id": "AA001",
-              "opponents": [],
-              "score": 1
-            },
-            "player2": {
-              "first_name": "Angel",
-              "last_name": "DI MARIA",
-              "date_of_birth": "01/01/1985",
-              "chess_id": "AA006",
-              "opponents": [],
-              "score": 0
-            },
-            "result": "1-0"
-          },
-          {
-            "match_id": "Roland Garros - Round 1 - M02",
-            "player1": {
-              "first_name": "Xabi",
-              "last_name": "ALONSO",
-              "date_of_birth": "01/05/1981",
-              "chess_id": "AA005",
-              "opponents": [],
-              "score": 1
-            },
-            "player2": {
-              "first_name": "Iker",
-              "last_name": "CASSILLAS ",
-              "date_of_birth": "01/01/1980",
-              "chess_id": "AA003",
-              "opponents": [],
-              "score": 0
-            },
-            "result": "1-0"
-          },
-          {
-            "match_id": "Roland Garros - Round 1 - M03",
-            "player1": {
-              "first_name": "Luka",
-              "last_name": "MODRIC",
-              "date_of_birth": "01/01/1984",
-              "chess_id": "AA007",
-              "opponents": [],
-              "score": 1
-            },
-            "player2": {
-              "first_name": "Dani",
-              "last_name": "CARVAJAL",
-              "date_of_birth": "11/01/1992",
-              "chess_id": "AA008",
-              "opponents": [],
-              "score": 0
-            },
-            "result": "1-0"
-          },
-          {
-            "match_id": "Roland Garros - Round 1 - M04",
-            "player1": {
-              "first_name": "Sergio",
-              "last_name": "RAMOS",
-              "date_of_birth": "01/06/1985",
-              "chess_id": "AA002",
-              "opponents": [],
-              "score": 0.5
-            },
-            "player2": {
-              "first_name": "Masut",
-              "last_name": "OZEL",
-              "date_of_birth": "01/01/1982",
-              "chess_id": "AA004",
-              "opponents": [],
-              "score": 0.5
-            },
-            "result": "0.5-0.5"
-          }
-        ]
-      }
-    ],
+    "event_round_list": [],
     "event_registered_players": [
       {
         "chess_id": "AA001",
         "first_name": "Cristiano",
         "last_name": "RONALDO",
         "date_of_birth": "01/05/1984",
-        "opponents": [
-          "AA006"
-        ],
-        "score": 1
+        "opponents": [],
+        "score": 0
       },
       {
         "chess_id": "AA002",
         "first_name": "Sergio",
         "last_name": "RAMOS",
         "date_of_birth": "01/06/1985",
-        "opponents": [
-          "AA004"
-        ],
-        "score": 0.5
+        "opponents": [],
+        "score": 0
       },
       {
         "chess_id": "AA003",
         "first_name": "Iker",
         "last_name": "CASSILLAS ",
         "date_of_birth": "01/01/1980",
-        "opponents": [
-          "AA005"
-        ],
+        "opponents": [],
         "score": 0
       },
       {
@@ -130,29 +36,23 @@
         "first_name": "Masut",
         "last_name": "OZEL",
         "date_of_birth": "01/01/1982",
-        "opponents": [
-          "AA002"
-        ],
-        "score": 0.5
+        "opponents": [],
+        "score": 0
       },
       {
         "chess_id": "AA005",
         "first_name": "Xabi",
         "last_name": "ALONSO",
         "date_of_birth": "01/05/1981",
-        "opponents": [
-          "AA003"
-        ],
-        "score": 1
+        "opponents": [],
+        "score": 0
       },
       {
         "chess_id": "AA006",
         "first_name": "Angel",
         "last_name": "DI MARIA",
         "date_of_birth": "01/01/1985",
-        "opponents": [
-          "AA001"
-        ],
+        "opponents": [],
         "score": 0
       },
       {
@@ -160,19 +60,15 @@
         "first_name": "Luka",
         "last_name": "MODRIC",
         "date_of_birth": "01/01/1984",
-        "opponents": [
-          "AA008"
-        ],
-        "score": 1
+        "opponents": [],
+        "score": 0
       },
       {
         "chess_id": "AA008",
         "first_name": "Dani",
         "last_name": "CARVAJAL",
         "date_of_birth": "11/01/1992",
-        "opponents": [
-          "AA007"
-        ],
+        "opponents": [],
         "score": 0
       }
     ],
