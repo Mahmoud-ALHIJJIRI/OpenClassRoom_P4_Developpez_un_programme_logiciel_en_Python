@@ -14,7 +14,9 @@ class RoundController:
 
         current_round_terminated = True
         max_rounds = 4
-
+        if len(selected_event.event_round_list) >= max_rounds:
+            print(f"The maximum number of rounds for {selected_event.event_name} has been reached.")
+            exit()
         new_round = None
         new_round_name = ""
 
