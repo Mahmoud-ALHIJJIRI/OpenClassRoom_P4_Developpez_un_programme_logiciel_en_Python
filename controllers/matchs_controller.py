@@ -83,11 +83,10 @@ class MatchesController:
                 if player1 is None or player2 is None:
                     continue  # Move to the next iteration if there are not enough players
 
-                # Rest of your code
-
                 # Handles odd number of players
                 match = Match(match_id, player1, player2)
-                matches.append(match)
+
+                """matches.append(match)"""
 
                 player1.opponents.append(player2)
                 player2.opponents.append(player1)
@@ -97,6 +96,7 @@ class MatchesController:
                     if player2 else "No opponent"
                 match_counter += 1  # Increment by 1 to generate both even and odd match IDs
                 selected_event.event_round_list[round_number - 1].matches.append(match)
+
                 # Display match details before prompting the user to select the winner
                 print(f"{match_id}", f"{player1_info}", f"{player2_info}", sep='\n')
 

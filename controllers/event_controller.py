@@ -5,7 +5,7 @@ from views.main_view import MenuView
 from controllers.player_controller import PlayerController
 from controllers.round_controller import RoundController
 from controllers.matchs_controller import MatchesController
-from models.rounds_model import Round
+from models.rounds_model import Round, Match
 from models.players_model import Player
 from models.event_model import Event
 
@@ -134,29 +134,78 @@ class EventController:
             round_data_list = event_data['event_round_list']
             rounds = []
             for round_data in round_data_list:
+                matches_data = round_data['matches']
+                matches = []
+
+                for match_data in matches_data:
+                    player1_data = match_data['player1']
+                    player1 = Player(
+                        first_name=player1_data['first_name'],
+                        last_name=player1_data['last_name'],
+                        date_of_birth=player1_data['date_of_birth'],
+                        chess_id=player1_data['chess_id'],
+                        opponents=[],
+                        score=player1_data['score']
+                    )
+
+                    player2_data = match_data['player2']
+                    player2 = Player(
+                        first_name=player2_data['first_name'],
+                        last_name=player2_data['last_name'],
+                        date_of_birth=player2_data['date_of_birth'],
+                        chess_id=player2_data['chess_id'],
+                        opponents=[],
+                        score=player2_data['score']
+                    )
+                    match = Match(
+                        match_id=match_data['match_id'],
+                        player1=player1,
+                        player2=player2,
+                        result=match_data['result']
+                        # Add other Match attributes here
+                    )
+                    matches.append(match)
+
                 round_obj = Round(
                     name=round_data['name'],
                     start_time=datetime.datetime.strptime(round_data['start_time'], "%H:%M 'on' %d-%m-%Y"),
                     end_time=datetime.datetime.strptime(round_data['end_time'], "%H:%M 'on' %d-%m-%Y") if round_data[
                         'end_time'] else None,
-                    matches=[]
+                    matches=matches
                 )
                 rounds.append(round_obj)
             event.event_round_list = rounds
 
             # Deserialize player data and append player objects to event_registered_players
+            chess_id_to_player = {}
+
+            # Iterate through player_data_list
             player_data_list = event_data['event_registered_players']
             players = []
+
             for player_data in player_data_list:
                 player = Player(
                     first_name=player_data['first_name'],
                     last_name=player_data['last_name'],
                     date_of_birth=player_data['date_of_birth'],
                     chess_id=player_data['chess_id'],
-                    opponents=[],
+                    opponents=[],  # Initialize opponent list
                     score=player_data['score']
                 )
+
+                # Add the player to the chess_id_to_player dictionary
+                chess_id_to_player[player.chess_id] = player
+
                 players.append(player)
+
+            # Iterate through player_data_list again to assign opponents
+            for player_data in player_data_list:
+                player = chess_id_to_player[player_data['chess_id']]
+                opponents_data = player_data['opponents']
+
+                # Assign opponents directly from the dictionary
+                player.opponents = [chess_id_to_player[opponent_id] for opponent_id in opponents_data]
+
             event.event_registered_players = players
 
             events.append(event)

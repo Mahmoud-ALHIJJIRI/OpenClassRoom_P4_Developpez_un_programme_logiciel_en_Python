@@ -24,3 +24,7 @@ class Round:
         self.start_time = start_time
         self.end_time = end_time
         self.matches = matches
+
+    def print_match(self):
+        for m in self.matches:
+            print(m)

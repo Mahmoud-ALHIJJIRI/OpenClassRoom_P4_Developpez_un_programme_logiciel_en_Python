@@ -11,7 +11,6 @@ class RoundController:
 
     def add_new_round(self, selected_event):
         round_name_template = "Round {}"
-
         current_round_terminated = True
         max_rounds = 4
         if len(selected_event.event_round_list) >= max_rounds:
@@ -50,6 +49,7 @@ class RoundController:
                           f"{start_datetime.strftime('%H:%M on %d-%m-%Y')} in the event {selected_event.event_name}.")
                     current_round_terminated = False  # Set the flag to indicate that a round is in progress
                     self.matches_controller.generate_matches(selected_event)
+
                     self.event_view.round_options()
             choice = input("Enter your choice: ")
             if choice == "1":
