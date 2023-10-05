@@ -65,68 +65,103 @@ class MatchesController:
                         # The loop will continue to ask for input until a valid option is provided
 
         elif round_number > 1:
+
             players_left = sorted_players.copy()
-            # Find the last match number and increment by 1
+
             match_counter = 1
-            for i in range(0, len(sorted_players), 2):
+
+            matches = []
+
+            while len(players_left) >= 2:
+
                 match_id = f"{selected_event.event_name} - Round {round_number} - M{match_counter:02d}"
+
                 player1 = players_left.pop(0)
-                # Take the first player from the list if there are more players
+
                 player2 = None
 
-                if players_left:  # Check if there are more players in the list
-                    for j in range(len(players_left)):
-                        if players_left[j] not in player1.opponents:
-                            player2 = players_left.pop(j)
-                            break  # Exit the loop once player2 is found
+                for opponent_candidate in players_left:
 
-                if player1 is None or player2 is None:
-                    continue  # Move to the next iteration if there are not enough players
+                    if opponent_candidate not in player1.opponents:
+                        player2 = opponent_candidate
 
-                # Handles odd number of players
-                match = Match(match_id, player1, player2)
+                        players_left.remove(opponent_candidate)
 
-                """matches.append(match)"""
+                        break
 
-                player1.opponents.append(player2)
-                player2.opponents.append(player1)
+                if player1 is not None and player2 is not None:
 
-                player1_info = f"{player1.chess_id} {player1.first_name} {player1.last_name}"
-                player2_info = f"{player2.chess_id} {player2.first_name} {player2.last_name}" \
-                    if player2 else "No opponent"
-                match_counter += 1  # Increment by 1 to generate both even and odd match IDs
-                selected_event.event_round_list[round_number - 1].matches.append(match)
+                    match = Match(match_id, player1, player2)
 
-                # Display match details before prompting the user to select the winner
-                print(f"{match_id}", f"{player1_info}", f"{player2_info}", sep='\n')
+                    player1.opponents.append(player2)
 
-                # Prompt the user to select the winner (1 for player 1, 2 for player 2, 3 for a draw)
-                while True:
-                    winner_input = input(
-                        f"Select the winner (1 for {match.player1.chess_id} {match.player1.first_name}, "
-                        f"2 for {match.player2.chess_id} {match.player2.first_name},"
-                        f" 3 for a draw): "
-                        "Or (0 to exit the application) : "
-                    )
+                    player2.opponents.append(player1)
 
-                    if winner_input == "1":
-                        match.result = f"1-0"
-                        match.player1.score += 1
-                        break  # Exit the loop if a valid input is provided
-                    elif winner_input == "2":
-                        match.result = f"0-1"
-                        match.player2.score += 1
-                        break  # Exit the loop if a valid input is provided
-                    elif winner_input == "3":
-                        match.result = f"0.5-0.5"
-                        match.player1.score += 0.5
-                        match.player2.score += 0.5
-                        break  # Exit the loop if a valid input is provided
-                    elif winner_input == "0":
-                        exit()  # Exit the application if the user wants to exit
-                    else:
-                        print("Invalid input. Please enter 1, 2, or 3 to select the winner.")
-                        # The loop will continue to ask for input until a valid option is provided
+                    matches.append(match)
+
+                    player1_info = f"{player1.chess_id} {player1.first_name} {player1.last_name}"
+
+                    player2_info = f"{player2.chess_id} {player2.first_name} {player2.last_name}"
+
+                    selected_event.event_round_list[round_number - 1].matches.append(match)
+
+                    # Display match details before prompting the user to select the winner
+
+                    print(f"{match_id}", f"{player1_info}", f"{player2_info}", sep='\n')
+
+                    # Prompt the user to select the winner
+
+                    while True:
+
+                        winner_input = input(
+
+                            f"Select the winner (1 for {player1.chess_id} {player1.first_name}, "
+
+                            f"2 for {player2.chess_id} {player2.first_name},"
+
+                            f" 3 for a draw): "
+
+                            "Or (0 to exit the application) : "
+
+                        )
+
+                        if winner_input == "1":
+
+                            match.result = f"1-0"
+
+                            player1.score += 1
+
+                            break  # Exit the loop if a valid input is provided
+
+                        elif winner_input == "2":
+
+                            match.result = f"0-1"
+
+                            player2.score += 1
+
+                            break  # Exit the loop if a valid input is provided
+
+                        elif winner_input == "3":
+
+                            match.result = f"0.5-0.5"
+
+                            player1.score += 0.5
+
+                            player2.score += 0.5
+
+                            break  # Exit the loop if a valid input is provided
+
+                        elif winner_input == "0":
+
+                            exit()  # Exit the application if the user wants to exit
+
+                        else:
+
+                            print("Invalid input. Please enter 1, 2, or 3 to select the winner.")
+
+                    match_counter += 1
+
+            # Rest of the code (pairing remaining players) remains the same.
 
         # Now, print the generated matches with results
         for match in matches:
