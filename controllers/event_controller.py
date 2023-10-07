@@ -385,7 +385,9 @@ class EventController:
             print("No players registered for this event.")
         else:
             print("List of Registered Players for Event:")
-            for player in selected_event.event_registered_players:
+            sorted_players = sorted(selected_event.event_registered_players, key=lambda x: x.last_name)
+
+            for player in sorted_players:
                 print(f"Player ID: {player.chess_id}, Name: {player.first_name} {player.last_name}")
 
     @staticmethod

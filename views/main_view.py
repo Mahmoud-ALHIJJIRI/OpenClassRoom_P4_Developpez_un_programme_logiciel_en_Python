@@ -2,8 +2,8 @@ class MenuView:
 
     @staticmethod
     def main_view_menu():
-        print("****************", "**# Main Menu #**", "1- Players Manager", "2- Events Manager", "3- Rounds Manager",
-              "4- Match Manager", "5- Reports", "0- Exit", "****************", sep="\n")
+        print("****************", "**# Main Menu #**", "1- Players Manager", "2- Events Manager", "3- Reports",
+              "0- Exit", "****************", sep="\n")
 
     @staticmethod
     def players_manager_menu():
@@ -34,9 +34,13 @@ class MenuView:
     @staticmethod
     def reports():
         print("****************", "# Reports:", "1- List of all players in alphabetical order.",
-              "2- List of all tournaments.", "3- Name and dates of a given tournament.",
-              "4- List of players in the tournament in alphabetical order.",
-              "5- List of all rounds in the tournament and all matches in the round.", "****************", sep="\n")
+              "2- List of all tournaments.", "3- Reports from one Event.", "****************", sep="\n")
+
+    @staticmethod
+    def one_event_reports_menu():
+        print("****************", "# Reports:", "1- Name and dates of a this event tournament.",
+              "2- List of players in this Event with alphabetical order.",
+              "3- List of all rounds in this Event and all matches in the round.", sep="\n")
 
     @staticmethod
     def round_options():

@@ -138,9 +138,12 @@ class PlayerController:
 
     def list_players(self):
         if not self.players:
-            print("No player found.")
+            print("No players found.")
         else:
             print("Listing Players")
-            for player in self.players:
+            sorted_players = sorted(self.players,
+                                    key=lambda player_sort: (player_sort.last_name, player_sort.first_name))
+            for player in sorted_players:
                 print(f"ID: {player.chess_id}, Full Name: {player.first_name} {player.last_name}, "
                       f"Score: {player.score}")
+
