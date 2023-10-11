@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: controllers\round_controller.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-2"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="controllers.round_controller.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               controllers\round_controller.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="E501">
+               <span class="count sev-2">
+                  10
+               </span>
+               <strong>E501:</strong> line too long (100 > 79 characters)
+               
+                  (and 7 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Line too long (100 > 79 characters):</p>
+               
+               <a href="controllers.round_controller.source.html#l17">
+                  <tt><i>17</i>             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The maximum number of rounds for </span><span class="si">{</span><span class="n">selected_event</span><span class="o">.</span><span class="n">event_name</span><span class="si">}</span><span class="s2"> has been reached.&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (85 > 79 characters):</p>
+               
+               <a href="controllers.round_controller.source.html#l24">
+                  <tt><i>24</i>             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The current round (</span><span class="si">{</span><span class="n">current_round_number</span><span class="si">}</span><span class="s2">) has been terminated.&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (101 > 79 characters):</p>
+               
+               <a href="controllers.round_controller.source.html#l34">
+                  <tt><i>34</i>                 <span class="n">new_round_name</span> <span class="o">=</span> <span class="n">round_name_template</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">selected_event</span><span class="o">.</span><span class="n">event_round_list</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (110 > 79 characters):</p>
+               
+               <a href="controllers.round_controller.source.html#l37">
+                  <tt><i>37</i>                 <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">round_exist</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">new_round_name</span> <span class="k">for</span> <span class="n">round_exist</span> <span class="ow">in</span> <span class="n">selected_event</span><span class="o">.</span><span class="n">event_round_list</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (92 > 79 characters):</p>
+               
+               <a href="controllers.round_controller.source.html#l41">
+                  <tt><i>41</i>                     <span class="n">end_datetime</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># Initialize end_datetime as None for the new round</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (95 > 79 characters):</p>
+               
+               <a href="controllers.round_controller.source.html#l43">
+                  <tt><i>43</i>                     <span class="n">new_round</span> <span class="o">=</span> <span class="n">Round</span><span class="p">(</span><span class="n">new_round_name</span><span class="p">,</span> <span class="n">start_datetime</span><span class="p">,</span> <span class="n">end_datetime</span><span class="p">,</span> <span class="n">matches</span><span class="o">=</span><span class="p">[])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (118 > 79 characters):</p>
+               
+               <a href="controllers.round_controller.source.html#l49">
+                  <tt><i>49</i>                           <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">start_datetime</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%H:%M on </span><span class="si">%d</span><span class="s1">-%m-%Y&#39;</span><span class="p">)</span><span class="si">}</span><span class="s2"> in the event </span><span class="si">{</span><span class="n">selected_event</span><span class="o">.</span><span class="n">event_name</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (108 > 79 characters):</p>
+               
+               <a href="controllers.round_controller.source.html#l50">
+                  <tt><i>50</i>                     <span class="n">current_round_terminated</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># Set the flag to indicate that a round is in progress</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (85 > 79 characters):</p>
+               
+               <a href="controllers.round_controller.source.html#l78">
+                  <tt><i>78</i>                 <span class="n">start_time_str</span> <span class="o">=</span> <span class="n">event_round</span><span class="o">.</span><span class="n">start_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%H:%M on </span><span class="si">%d</span><span class="s1">-%m-%Y&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (85 > 79 characters):</p>
+               
+               <a href="controllers.round_controller.source.html#l80">
+                  <tt><i>80</i>                     <span class="n">end_time_str</span> <span class="o">=</span> <span class="n">event_round</span><span class="o">.</span><span class="n">end_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;%H:%M on </span><span class="si">%d</span><span class="s1">-%m-%Y&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>

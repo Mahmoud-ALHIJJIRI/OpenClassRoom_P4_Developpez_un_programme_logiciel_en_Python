@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: controllers\event_controller.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="controllers.event_controller.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               controllers\event_controller.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F541">
+               <span class="count sev-1">
+                  1
+               </span>
+               <strong>F541:</strong> f-string is missing placeholders
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="controllers.event_controller.source.html#l295">
+                  <tt><i>295</i>         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;***Managing&quot;</span><span class="p">,</span> <span class="n">selected_event</span><span class="o">.</span><span class="n">event_name</span><span class="p">,</span> <span class="s2">&quot;***&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E501">
+               <span class="count sev-2">
+                  42
+               </span>
+               <strong>E501:</strong> line too long (104 > 79 characters)
+               
+                  (and 24 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Line too long (104 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l42">
+                  <tt><i>42</i>             <span class="n">event_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter Event Name or( &#39;9&#39; to go to main menu, &#39;exit&#39; to quit): &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">title</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (114 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l47">
+                  <tt><i>47</i>             <span class="n">event_location</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter Event&#39;s Location or( &#39;9&#39; to go to main menu, &#39;exit&#39; to quit): &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">title</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (81 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l53">
+                  <tt><i>53</i>                 <span class="n">event_start_date</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter Event&#39;s Start Date (dd/mm/yyyy) &quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (89 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l54">
+                  <tt><i>54</i>                                          <span class="s2">&quot;or( &#39;9&#39; to go to main menu, &#39;exit&#39; to quit): &quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (102 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l60">
+                  <tt><i>60</i>                     <span class="n">event_start_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">event_start_date</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">/%m/%Y&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (87 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l66">
+                  <tt><i>66</i>                                        <span class="s2">&quot;or( &#39;9&#39; to go to main menu, &#39;exit&#39; to quit): &quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (98 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l72">
+                  <tt><i>72</i>                     <span class="n">event_end_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">event_end_date</span><span class="p">,</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">/%m/%Y&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (116 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l81">
+                  <tt><i>81</i>             <span class="n">event_general_notes</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter Event&#39;s General Notes or( &#39;9&#39; to go to main menu, &#39;exit&#39; to quit): &quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (91 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l87">
+                  <tt><i>87</i>             <span class="n">new_event</span> <span class="o">=</span> <span class="n">Event</span><span class="p">(</span><span class="n">event_name</span><span class="p">,</span> <span class="n">event_location</span><span class="p">,</span> <span class="n">event_start_date</span><span class="p">,</span> <span class="n">event_end_date</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (115 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l88">
+                  <tt><i>88</i>                               <span class="n">event_current_round</span><span class="p">,</span> <span class="n">event_round_list</span><span class="p">,</span> <span class="n">event_registered_players</span><span class="p">,</span> <span class="n">event_general_notes</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (85 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l91">
+                  <tt><i>91</i>             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The Event:</span><span class="se">\n</span><span class="si">{</span><span class="n">new_event</span><span class="o">.</span><span class="n">event_name</span><span class="si">}</span><span class="s2"> in </span><span class="si">{</span><span class="n">new_event</span><span class="o">.</span><span class="n">event_location</span><span class="si">}</span><span class="s2">&quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (111 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l125">
+                  <tt><i>125</i>                 <span class="n">event_start_date</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">event_data</span><span class="p">[</span><span class="s1">&#39;event_start_date&#39;</span><span class="p">],</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">-%m-%Y&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">(),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (107 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l126">
+                  <tt><i>126</i>                 <span class="n">event_end_date</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">event_data</span><span class="p">[</span><span class="s1">&#39;event_end_date&#39;</span><span class="p">],</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1">-%m-%Y&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">(),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (80 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l129">
+                  <tt><i>129</i>                 <span class="n">event_registered_players</span><span class="o">=</span><span class="n">event_data</span><span class="p">[</span><span class="s1">&#39;event_registered_players&#39;</span><span class="p">],</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (107 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l171">
+                  <tt><i>171</i>                     <span class="n">start_time</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">round_data</span><span class="p">[</span><span class="s1">&#39;start_time&#39;</span><span class="p">],</span> <span class="s2">&quot;%H:%M &#39;on&#39; </span><span class="si">%d</span><span class="s2">-%m-%Y&quot;</span><span class="p">),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (117 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l172">
+                  <tt><i>172</i>                     <span class="n">end_time</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">round_data</span><span class="p">[</span><span class="s1">&#39;end_time&#39;</span><span class="p">],</span> <span class="s2">&quot;%H:%M &#39;on&#39; </span><span class="si">%d</span><span class="s2">-%m-%Y&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">round_data</span><span class="p">[</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (91 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l179">
+                  <tt><i>179</i>             <span class="c1"># Deserialize player data and append player objects to event_registered_players</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (102 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l207">
+                  <tt><i>207</i>                 <span class="n">player</span><span class="o">.</span><span class="n">opponents</span> <span class="o">=</span> <span class="p">[</span><span class="n">chess_id_to_player</span><span class="p">[</span><span class="n">opponent_id</span><span class="p">]</span> <span class="k">for</span> <span class="n">opponent_id</span> <span class="ow">in</span> <span class="n">opponents_data</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (110 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l228">
+                  <tt><i>228</i>                     <span class="s1">&#39;opponents&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">opponent</span><span class="o">.</span><span class="n">chess_id</span> <span class="k">for</span> <span class="n">opponent</span> <span class="ow">in</span> <span class="n">player</span><span class="o">.</span><span class="n">opponents</span><span class="p">],</span>  <span class="c1"># Include opponent IDs</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (100 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l236">
+                  <tt><i>236</i>                 <span class="n">matches_data</span> <span class="o">=</span> <span class="p">[</span><span class="n">match</span><span class="o">.</span><span class="n">to_dict</span><span class="p">()</span> <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">round_obj</span><span class="o">.</span><span class="n">matches</span> <span class="k">if</span> <span class="n">match</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (87 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l239">
+                  <tt><i>239</i>                     <span class="s1">&#39;start_time&#39;</span><span class="p">:</span> <span class="n">round_obj</span><span class="o">.</span><span class="n">start_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%H:%M &#39;on&#39; </span><span class="si">%d</span><span class="s2">-%m-%Y&quot;</span><span class="p">),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (115 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l240">
+                  <tt><i>240</i>                     <span class="s1">&#39;end_time&#39;</span><span class="p">:</span> <span class="n">round_obj</span><span class="o">.</span><span class="n">end_time</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%H:%M &#39;on&#39; </span><span class="si">%d</span><span class="s2">-%m-%Y&quot;</span><span class="p">)</span> <span class="k">if</span> <span class="n">round_obj</span><span class="o">.</span><span class="n">end_time</span> <span class="k">else</span> <span class="kc">None</span><span class="p">,</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (80 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l246">
+                  <tt><i>246</i>                 <span class="s1">&#39;event_start_date&#39;</span><span class="p">:</span> <span class="n">event</span><span class="o">.</span><span class="n">event_start_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">-%m-%Y&#39;</span><span class="p">),</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (83 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l249">
+                  <tt><i>249</i>                 <span class="s1">&#39;event_round_list&#39;</span><span class="p">:</span> <span class="n">round_data</span><span class="p">,</span>  <span class="c1"># Serialize rounds as dictionaries</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (86 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l277">
+                  <tt><i>277</i>                     <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the number of the event you want to select &quot;</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (83 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l278">
+                  <tt><i>278</i>                                    <span class="s2">&quot;or( &#39;9&#39; to go to main menu, &#39;exit&#39; to quit): &quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (81 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l286">
+                  <tt><i>286</i>                         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You selected event: </span><span class="si">{</span><span class="n">selected_event</span><span class="o">.</span><span class="n">event_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (101 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l290">
+                  <tt><i>290</i>                         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid event number. Please enter a valid number or &#39;exit&#39; to quit.&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (84 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l292">
+                  <tt><i>292</i>                     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid input. Please enter a number or &#39;exit&#39; to quit.&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (105 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l337">
+                  <tt><i>337</i>                                  <span class="p">[</span><span class="n">player</span><span class="o">.</span><span class="n">chess_id</span> <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">selected_event</span><span class="o">.</span><span class="n">event_registered_players</span><span class="p">]]</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (100 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l346">
+                  <tt><i>346</i>                 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Player ID: </span><span class="si">{</span><span class="n">player</span><span class="o">.</span><span class="n">chess_id</span><span class="si">}</span><span class="s2">, Name: </span><span class="si">{</span><span class="n">player</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">player</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (107 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l348">
+                  <tt><i>348</i>             <span class="n">player_choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the chess ID of the player you want to add (or &#39;exit&#39; to quit): &quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (88 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l353">
+                  <tt><i>353</i>             <span class="k">elif</span> <span class="n">player_choice</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="n">player</span><span class="o">.</span><span class="n">chess_id</span> <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">players_available</span><span class="p">]:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (88 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l354">
+                  <tt><i>354</i>                 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid player ID. Please enter a valid chess ID from the list.&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (83 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l357">
+                  <tt><i>357</i>                                         <span class="k">if</span> <span class="n">player</span><span class="o">.</span><span class="n">chess_id</span> <span class="o">==</span> <span class="n">player_choice</span><span class="p">),</span> <span class="kc">None</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (100 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l360">
+                  <tt><i>360</i>                             <span class="p">[</span><span class="n">player</span><span class="o">.</span><span class="n">chess_id</span> <span class="k">for</span> <span class="n">player</span> <span class="ow">in</span> <span class="n">selected_event</span><span class="o">.</span><span class="n">event_registered_players</span><span class="p">]:</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (105 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l361">
+                  <tt><i>361</i>                         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The player with ID </span><span class="si">{</span><span class="n">player_choice</span><span class="si">}</span><span class="s2"> is already registered for the event.&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (87 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l363">
+                  <tt><i>363</i>                         <span class="n">selected_event</span><span class="o">.</span><span class="n">event_registered_players</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">selected_player</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (97 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l364">
+                  <tt><i>364</i>                         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The player with ID </span><span class="si">{</span><span class="n">player_choice</span><span class="si">}</span><span class="s2"> has been added to the event.&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (103 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l389">
+                  <tt><i>389</i>             <span class="n">sorted_players</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">selected_event</span><span class="o">.</span><span class="n">event_registered_players</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">last_name</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (100 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l392">
+                  <tt><i>392</i>                 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Player ID: </span><span class="si">{</span><span class="n">player</span><span class="o">.</span><span class="n">chess_id</span><span class="si">}</span><span class="s2">, Name: </span><span class="si">{</span><span class="n">player</span><span class="o">.</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">player</span><span class="o">.</span><span class="n">last_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (89 > 79 characters):</p>
+               
+               <a href="controllers.event_controller.source.html#l400">
+                  <tt><i>400</i>             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;No general notes available for Event &#39;</span><span class="si">{</span><span class="n">selected_event</span><span class="o">.</span><span class="n">event_name</span><span class="si">}</span><span class="s2">&#39;.&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>
