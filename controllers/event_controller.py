@@ -310,6 +310,7 @@ class EventController:
             elif choice == "4":
                 print("Listing Event's Rounds")
                 self.rounds.list_event_rounds(selected_event)
+                break
             elif choice == "5":
                 self.view_general_notes(selected_event)
                 break

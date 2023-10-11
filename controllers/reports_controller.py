@@ -107,5 +107,3 @@ class ReportController:
 
         if not has_matches:
             print("No matches found for this event.")
-
-

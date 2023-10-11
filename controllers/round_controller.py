@@ -61,6 +61,7 @@ class RoundController:
                 current_round_terminated = True
 
             elif choice == "9":
+                new_round.end_time = datetime.datetime.now()
                 break
             elif choice == "0":
                 exit()

@@ -62,5 +62,45 @@
     "chess_id": "AA008",
     "score": 0,
     "opponents": []
+  },
+  {
+    "first_name": "David",
+    "last_name": "BECKHAM",
+    "date_of_birth": "01/11/1978",
+    "chess_id": "AA009",
+    "score": 0,
+    "opponents": []
+  },
+  {
+    "first_name": "Mo",
+    "last_name": "SALAH",
+    "date_of_birth": "01/05/1993",
+    "chess_id": "AA010",
+    "score": 0,
+    "opponents": []
+  },
+  {
+    "first_name": "Mahmoud",
+    "last_name": "ALHIJJIRI",
+    "date_of_birth": "11/03/1990",
+    "chess_id": "AA011",
+    "score": 0,
+    "opponents": []
+  },
+  {
+    "first_name": "Saleh",
+    "last_name": "TRISSI",
+    "date_of_birth": "01/02/1992",
+    "chess_id": "AA012",
+    "score": 0,
+    "opponents": []
+  },
+  {
+    "first_name": "Rami",
+    "last_name": "ROMANI",
+    "date_of_birth": "01/01/2000",
+    "chess_id": "AA013",
+    "score": 0,
+    "opponents": []
   }
 ]

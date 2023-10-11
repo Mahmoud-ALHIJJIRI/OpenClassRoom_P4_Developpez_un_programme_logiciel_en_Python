@@ -106,7 +106,6 @@ class PlayerController:
         players_data = []
 
         file_path = os.path.join('database', 'Players.json')
-        print(f"Loading data from {file_path}")
 
         if os.path.exists(file_path):
             with open(file_path, 'r') as file:
@@ -146,4 +145,3 @@ class PlayerController:
             for player in sorted_players:
                 print(f"ID: {player.chess_id}, Full Name: {player.first_name} {player.last_name}, "
                       f"Score: {player.score}")
-
