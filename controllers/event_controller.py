@@ -12,6 +12,7 @@ from models.event_model import Event
 
 class EventController:
     def __init__(self):
+        # Initialize the EventController with required components
         self.events = self.load_event_from_json()
         self.event_view = MenuView()
         self.players_list = PlayerController()
@@ -19,7 +20,7 @@ class EventController:
         self.matches = MatchesController()
 
     def handle_event_menu(self, event_choice):
-
+        # Handle the user's choice in the main menu
         if event_choice == "1":
             print("Add a new Event")
             self.add_new_event()
@@ -38,7 +39,9 @@ class EventController:
             print("Invalid choice. Please select a valid option.")
 
     def add_new_event(self):
+        # Add a new event to the system
         while True:
+            # Gather event details from the user
             event_name = input("Enter Event Name or( '9' to go to main menu, 'exit' to quit): ").title()
             if event_name.lower() == 'exit':
                 exit()
@@ -49,6 +52,7 @@ class EventController:
                 exit()
             if event_location == '9':
                 break
+            # Repeat this process for other event details...
             while True:
                 event_start_date = input("Enter Event's Start Date (dd/mm/yyyy) "
                                          "or( '9' to go to main menu, 'exit' to quit): ")
@@ -83,13 +87,14 @@ class EventController:
                 exit()
             if event_general_notes == '9':
                 break
-
+            # Create a new Event instance and add it to the events list
             new_event = Event(event_name, event_location, event_start_date, event_end_date,
                               event_current_round, event_round_list, event_registered_players, event_general_notes)
             self.events.append(new_event)
             self.save_event_to_json()
             print(f"The Event:\n{new_event.event_name} in {new_event.event_location}"
                   f"\nhas been added successfully!")
+            # Provide user options to add more events or return to the main menu
             while True:
                 print("Choose an option:")
                 print("1. Add another Event")
@@ -108,6 +113,7 @@ class EventController:
 
     @staticmethod
     def load_event_from_json():
+        # Load events data from a JSON file
         events_data = []
         file_path = os.path.join('database', 'events.json')
         if os.path.exists(file_path):
@@ -213,6 +219,7 @@ class EventController:
         return events
 
     def save_event_to_json(self):
+        # Save events data to a JSON file
         folder_path = 'database'
         file_path = os.path.join(folder_path, 'events.json')
         if not os.path.exists(folder_path):
@@ -257,6 +264,7 @@ class EventController:
             json.dump(events_data, file, indent=2)
 
     def list_events(self):
+        # List available events
         if not self.events:
             print("No events found.")
         else:
@@ -265,6 +273,7 @@ class EventController:
                 print(f"{i}. {event.event_name} in {event.event_location}")
 
     def select_event_to_mange(self):
+        # Select an event to manage
         while True:
             if not self.events:
                 print("No events found.")
@@ -292,6 +301,7 @@ class EventController:
                     print("Invalid input. Please enter a number or 'exit' to quit.")
 
     def manage_selected_event(self, selected_event):
+        # Manage the selected event
         print(f"***Managing {selected_event.event_name} ***")
         self.event_view.one_event_manage_menu()
         while True:
