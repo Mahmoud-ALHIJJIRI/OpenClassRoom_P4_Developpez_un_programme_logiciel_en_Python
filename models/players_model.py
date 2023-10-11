@@ -2,7 +2,8 @@ import datetime
 
 
 class Player:
-    def __init__(self, first_name: str, last_name: str, date_of_birth: datetime, chess_id: str, opponents: [], score=0):
+    def __init__(self, first_name: str, last_name: str, date_of_birth: datetime, chess_id: str,
+                 opponents: [], score=0):
         """ Initialize the player's attributes """
         self.first_name = first_name
         self.last_name = last_name

@@ -85,7 +85,7 @@ In the terminal, navigate to the desired folder.
 
 _Last exported report:_
 
-![latest_report](Images/latest_report.png)
+![latest_report](Images/flake8.png)
 
 <div id='id-section2'></div>
 

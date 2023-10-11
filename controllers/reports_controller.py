@@ -61,7 +61,7 @@ class ReportController:
                     print("Invalid input. Please enter a number or 'exit' to quit.")
 
     def reports_selected_event(self, selected_event):
-        print(f"***Managing", selected_event.event_name, "***")
+        print(f"***Managing {selected_event.event_name} ***")
         self.view.one_event_reports_menu()
         while True:
 

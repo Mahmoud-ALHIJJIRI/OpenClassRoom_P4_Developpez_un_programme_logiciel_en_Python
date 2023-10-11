@@ -39,15 +39,15 @@ class MatchesController:
                         "Or (0 to exit the application) : "
                     )
                     if winner_input == "1":
-                        match.result = f"1-0"
+                        match.result = "1-0"
                         match.player1.score += 1
                         break  # Exit the loop if a valid input is provided
                     elif winner_input == "2":
-                        match.result = f"0-1"
+                        match.result = "0-1"
                         match.player2.score += 1
                         break  # Exit the loop if a valid input is provided
                     elif winner_input == "3":
-                        match.result = f"0.5-0.5"
+                        match.result = "0.5-0.5"
                         match.player1.score += 0.5
                         match.player2.score += 0.5
                         break  # Exit the loop if a valid input is provided
@@ -89,17 +89,17 @@ class MatchesController:
                             "Or (0 to exit the application) : "
                         )
                         if winner_input == "1":
-                            match.result = f"1-0"
+                            match.result = "1-0"
                             player1.score += 1
                             player2.score += 0
                             break
                         elif winner_input == "2":
-                            match.result = f"0-1"
+                            match.result = "0-1"
                             player1.score += 0
                             player2.score += 1
                             break
                         elif winner_input == "3":
-                            match.result = f"0.5-0.5"
+                            match.result = "0.5-0.5"
                             player1.score += 0.5
                             player2.score += 0.5
                             break

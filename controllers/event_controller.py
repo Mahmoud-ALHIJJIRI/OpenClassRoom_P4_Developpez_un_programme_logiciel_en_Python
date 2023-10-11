@@ -292,7 +292,7 @@ class EventController:
                     print("Invalid input. Please enter a number or 'exit' to quit.")
 
     def manage_selected_event(self, selected_event):
-        print(f"***Managing", selected_event.event_name, "***")
+        print(f"***Managing {selected_event.event_name} ***")
         self.event_view.one_event_manage_menu()
         while True:
 
