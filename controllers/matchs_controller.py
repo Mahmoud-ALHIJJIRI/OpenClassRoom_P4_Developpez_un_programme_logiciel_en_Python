@@ -59,7 +59,7 @@ class MatchesController:
         elif round_number > 1:
             players_left = sorted_players.copy()
             match_counter = 1
-            matches = []
+
             while len(players_left) >= 2:
                 match_id = f"{selected_event.event_name} - Round {round_number} - M{match_counter:02d}"
                 player1 = players_left.pop(0)
@@ -69,16 +69,19 @@ class MatchesController:
                         player2 = opponent_candidate
                         players_left.remove(opponent_candidate)
                         break
+
                 if player1 is not None and player2 is not None:
                     match = Match(match_id, player1, player2)
                     player1.opponents.append(player2)
                     player2.opponents.append(player1)
                     matches.append(match)
+
                     player1_info = f"{player1.chess_id} {player1.first_name} {player1.last_name}"
                     player2_info = f"{player2.chess_id} {player2.first_name} {player2.last_name}"
                     selected_event.event_round_list[round_number - 1].matches.append(match)
-                    print(f"{match_id}", f"{player1_info}", f"{player2_info}", sep='\n')
+
                     while True:
+                        print(f"{match_id}", f"{player1_info}", f"{player2_info}", sep='\n')
                         winner_input = input(
                             f"Select the winner (1 for {player1.chess_id} {player1.first_name}, "
                             f"2 for {player2.chess_id} {player2.first_name},"
@@ -88,21 +91,24 @@ class MatchesController:
                         if winner_input == "1":
                             match.result = f"1-0"
                             player1.score += 1
-                            break  # Exit the loop if a valid input is provided
+                            player2.score += 0
+                            break
                         elif winner_input == "2":
                             match.result = f"0-1"
+                            player1.score += 0
                             player2.score += 1
-                            break  # Exit the loop if a valid input is provided
+                            break
                         elif winner_input == "3":
                             match.result = f"0.5-0.5"
                             player1.score += 0.5
                             player2.score += 0.5
-                            break  # Exit the loop if a valid input is provided
+                            break
                         elif winner_input == "0":
                             exit()  # Exit the application if the user wants to exit
                         else:
                             print("Invalid input. Please enter 1, 2, or 3 to select the winner.")
                     match_counter += 1
+
         # Now, print the generated matches with results
         for match in matches:
             print(f"Match ID: {match.match_id}")

@@ -1,6 +1,6 @@
 [
   {
-    "event_name": "Webly",
+    "event_name": "Wembly",
     "event_location": "London",
     "event_start_date": "01-08-2023",
     "event_end_date": "31-08-2023",
@@ -8,78 +8,58 @@
     "event_round_list": [
       {
         "name": "Round 1",
-        "start_time": "19:28 'on' 11-10-2023",
-        "end_time": "19:28 'on' 11-10-2023",
+        "start_time": "21:46 'on' 11-10-2023",
+        "end_time": "21:46 'on' 11-10-2023",
         "matches": [
           {
-            "match_id": "Webly - Round 1 - M01",
+            "match_id": "Wembly - Round 1 - M01",
             "player1": {
-              "first_name": "Cristiano",
-              "last_name": "RONALDO",
-              "date_of_birth": "01/05/1984",
-              "chess_id": "AA001",
-              "opponents": [],
-              "score": 1
-            },
-            "player2": {
-              "first_name": "Xabi",
-              "last_name": "ALONSO",
-              "date_of_birth": "01/05/1981",
-              "chess_id": "AA005",
-              "opponents": [],
-              "score": 0
-            },
-            "result": "1-0"
-          },
-          {
-            "match_id": "Webly - Round 1 - M02",
-            "player1": {
-              "first_name": "Masut",
-              "last_name": "OZEL",
-              "date_of_birth": "01/01/1982",
-              "chess_id": "AA004",
-              "opponents": [],
-              "score": 1
-            },
-            "player2": {
-              "first_name": "Sergio",
-              "last_name": "RAMOS",
-              "date_of_birth": "01/06/1985",
-              "chess_id": "AA002",
-              "opponents": [],
-              "score": 0
-            },
-            "result": "1-0"
-          },
-          {
-            "match_id": "Webly - Round 1 - M03",
-            "player1": {
-              "first_name": "Dani",
-              "last_name": "CARVAJAL",
-              "date_of_birth": "11/01/1992",
-              "chess_id": "AA008",
-              "opponents": [],
-              "score": 1
-            },
-            "player2": {
               "first_name": "Iker",
               "last_name": "CASSILLAS ",
               "date_of_birth": "01/01/1980",
               "chess_id": "AA003",
               "opponents": [],
-              "score": 0
+              "score": 2
+            },
+            "player2": {
+              "first_name": "Masut",
+              "last_name": "OZEL",
+              "date_of_birth": "01/01/1982",
+              "chess_id": "AA004",
+              "opponents": [],
+              "score": 1.5
             },
             "result": "1-0"
           },
           {
-            "match_id": "Webly - Round 1 - M04",
+            "match_id": "Wembly - Round 1 - M02",
             "player1": {
+              "first_name": "Sergio",
+              "last_name": "RAMOS",
+              "date_of_birth": "01/06/1985",
+              "chess_id": "AA002",
+              "opponents": [],
+              "score": 2.5
+            },
+            "player2": {
               "first_name": "Angel",
               "last_name": "DI MARIA",
               "date_of_birth": "01/01/1985",
               "chess_id": "AA006",
               "opponents": [],
-              "score": 1
+              "score": 1.5
+            },
+            "result": "0.5-0.5"
+          },
+          {
+            "match_id": "Wembly - Round 1 - M03",
+            "player1": {
+              "first_name": "Xabi",
+              "last_name": "ALONSO",
+              "date_of_birth": "01/05/1981",
+              "chess_id": "AA005",
+              "opponents": [],
+              "score": 0.5
             },
             "player2": {
               "first_name": "Luka",
@@ -87,7 +67,27 @@
               "date_of_birth": "01/01/1984",
               "chess_id": "AA007",
               "opponents": [],
-              "score": 0
+              "score": 4
+            },
+            "result": "0-1"
+          },
+          {
+            "match_id": "Wembly - Round 1 - M04",
+            "player1": {
+              "first_name": "Dani",
+              "last_name": "CARVAJAL",
+              "date_of_birth": "11/01/1992",
+              "chess_id": "AA008",
+              "opponents": [],
+              "score": 2
+            },
+            "player2": {
+              "first_name": "Cristiano",
+              "last_name": "RONALDO",
+              "date_of_birth": "01/05/1984",
+              "chess_id": "AA001",
+              "opponents": [],
+              "score": 2.0
             },
             "result": "1-0"
           }
@@ -95,31 +95,11 @@
       },
       {
         "name": "Round 2",
-        "start_time": "19:29 'on' 11-10-2023",
-        "end_time": "19:29 'on' 11-10-2023",
+        "start_time": "21:46 'on' 11-10-2023",
+        "end_time": "21:46 'on' 11-10-2023",
         "matches": [
           {
-            "match_id": "Webly - Round 2 - M01",
-            "player1": {
-              "first_name": "Angel",
-              "last_name": "DI MARIA",
-              "date_of_birth": "01/01/1985",
-              "chess_id": "AA006",
-              "opponents": [],
-              "score": 4
-            },
-            "player2": {
-              "first_name": "Cristiano",
-              "last_name": "RONALDO",
-              "date_of_birth": "01/05/1984",
-              "chess_id": "AA001",
-              "opponents": [],
-              "score": 3
-            },
-            "result": "1-0"
-          },
-          {
-            "match_id": "Webly - Round 2 - M02",
+            "match_id": "Wembly - Round 2 - M01",
             "player1": {
               "first_name": "Dani",
               "last_name": "CARVAJAL",
@@ -129,18 +109,6 @@
               "score": 2
             },
             "player2": {
-              "first_name": "Masut",
-              "last_name": "OZEL",
-              "date_of_birth": "01/01/1982",
-              "chess_id": "AA004",
-              "opponents": [],
-              "score": 2
-            },
-            "result": "1-0"
-          },
-          {
-            "match_id": "Webly - Round 2 - M03",
-            "player1": {
               "first_name": "Iker",
               "last_name": "CASSILLAS ",
               "date_of_birth": "01/01/1980",
@@ -148,25 +116,57 @@
               "opponents": [],
               "score": 2
             },
-            "player2": {
+            "result": "0-1"
+          },
+          {
+            "match_id": "Wembly - Round 2 - M02",
+            "player1": {
               "first_name": "Luka",
               "last_name": "MODRIC",
               "date_of_birth": "01/01/1984",
               "chess_id": "AA007",
               "opponents": [],
-              "score": 1
+              "score": 4
+            },
+            "player2": {
+              "first_name": "Angel",
+              "last_name": "DI MARIA",
+              "date_of_birth": "01/01/1985",
+              "chess_id": "AA006",
+              "opponents": [],
+              "score": 1.5
             },
             "result": "1-0"
           },
           {
-            "match_id": "Webly - Round 2 - M04",
+            "match_id": "Wembly - Round 2 - M03",
             "player1": {
               "first_name": "Sergio",
               "last_name": "RAMOS",
               "date_of_birth": "01/06/1985",
               "chess_id": "AA002",
               "opponents": [],
-              "score": 1
+              "score": 2.5
+            },
+            "player2": {
+              "first_name": "Cristiano",
+              "last_name": "RONALDO",
+              "date_of_birth": "01/05/1984",
+              "chess_id": "AA001",
+              "opponents": [],
+              "score": 2.0
+            },
+            "result": "0.5-0.5"
+          },
+          {
+            "match_id": "Wembly - Round 2 - M04",
+            "player1": {
+              "first_name": "Masut",
+              "last_name": "OZEL",
+              "date_of_birth": "01/01/1982",
+              "chess_id": "AA004",
+              "opponents": [],
+              "score": 1.5
             },
             "player2": {
               "first_name": "Xabi",
@@ -174,7 +174,7 @@
               "date_of_birth": "01/05/1981",
               "chess_id": "AA005",
               "opponents": [],
-              "score": 0
+              "score": 0.5
             },
             "result": "1-0"
           }
@@ -182,56 +182,16 @@
       },
       {
         "name": "Round 3",
-        "start_time": "19:29 'on' 11-10-2023",
-        "end_time": "19:29 'on' 11-10-2023",
+        "start_time": "21:46 'on' 11-10-2023",
+        "end_time": "21:46 'on' 11-10-2023",
         "matches": [
           {
-            "match_id": "Webly - Round 3 - M01",
+            "match_id": "Wembly - Round 3 - M01",
             "player1": {
-              "first_name": "Angel",
-              "last_name": "DI MARIA",
-              "date_of_birth": "01/01/1985",
-              "chess_id": "AA006",
-              "opponents": [],
-              "score": 4
-            },
-            "player2": {
-              "first_name": "Dani",
-              "last_name": "CARVAJAL",
-              "date_of_birth": "11/01/1992",
-              "chess_id": "AA008",
-              "opponents": [],
-              "score": 2
-            },
-            "result": "1-0"
-          },
-          {
-            "match_id": "Webly - Round 3 - M02",
-            "player1": {
-              "first_name": "Cristiano",
-              "last_name": "RONALDO",
-              "date_of_birth": "01/05/1984",
-              "chess_id": "AA001",
-              "opponents": [],
-              "score": 3
-            },
-            "player2": {
               "first_name": "Iker",
               "last_name": "CASSILLAS ",
               "date_of_birth": "01/01/1980",
               "chess_id": "AA003",
-              "opponents": [],
-              "score": 2
-            },
-            "result": "1-0"
-          },
-          {
-            "match_id": "Webly - Round 3 - M03",
-            "player1": {
-              "first_name": "Masut",
-              "last_name": "OZEL",
-              "date_of_birth": "01/01/1982",
-              "chess_id": "AA004",
               "opponents": [],
               "score": 2
             },
@@ -241,26 +201,19 @@
               "date_of_birth": "01/01/1984",
               "chess_id": "AA007",
               "opponents": [],
-              "score": 1
-            },
-            "result": "1-0"
-          }
-        ]
-      },
-      {
-        "name": "Round 4",
-        "start_time": "19:29 'on' 11-10-2023",
-        "end_time": "19:29 'on' 11-10-2023",
-        "matches": [
-          {
-            "match_id": "Webly - Round 4 - M01",
-            "player1": {
-              "first_name": "Angel",
-              "last_name": "DI MARIA",
-              "date_of_birth": "01/01/1985",
-              "chess_id": "AA006",
-              "opponents": [],
               "score": 4
+            },
+            "result": "0-1"
+          },
+          {
+            "match_id": "Wembly - Round 3 - M02",
+            "player1": {
+              "first_name": "Dani",
+              "last_name": "CARVAJAL",
+              "date_of_birth": "11/01/1992",
+              "chess_id": "AA008",
+              "opponents": [],
+              "score": 2
             },
             "player2": {
               "first_name": "Masut",
@@ -268,19 +221,66 @@
               "date_of_birth": "01/01/1982",
               "chess_id": "AA004",
               "opponents": [],
-              "score": 2
+              "score": 1.5
             },
             "result": "1-0"
           },
           {
-            "match_id": "Webly - Round 4 - M02",
+            "match_id": "Wembly - Round 3 - M03",
             "player1": {
+              "first_name": "Sergio",
+              "last_name": "RAMOS",
+              "date_of_birth": "01/06/1985",
+              "chess_id": "AA002",
+              "opponents": [],
+              "score": 2.5
+            },
+            "player2": {
+              "first_name": "Xabi",
+              "last_name": "ALONSO",
+              "date_of_birth": "01/05/1981",
+              "chess_id": "AA005",
+              "opponents": [],
+              "score": 0.5
+            },
+            "result": "0.5-0.5"
+          },
+          {
+            "match_id": "Wembly - Round 3 - M04",
+            "player1": {
+              "first_name": "Angel",
+              "last_name": "DI MARIA",
+              "date_of_birth": "01/01/1985",
+              "chess_id": "AA006",
+              "opponents": [],
+              "score": 1.5
+            },
+            "player2": {
               "first_name": "Cristiano",
               "last_name": "RONALDO",
               "date_of_birth": "01/05/1984",
               "chess_id": "AA001",
               "opponents": [],
-              "score": 3
+              "score": 2.0
+            },
+            "result": "0.5-0.5"
+          }
+        ]
+      },
+      {
+        "name": "Round 4",
+        "start_time": "21:46 'on' 11-10-2023",
+        "end_time": "21:46 'on' 11-10-2023",
+        "matches": [
+          {
+            "match_id": "Wembly - Round 4 - M01",
+            "player1": {
+              "first_name": "Luka",
+              "last_name": "MODRIC",
+              "date_of_birth": "01/01/1984",
+              "chess_id": "AA007",
+              "opponents": [],
+              "score": 4
             },
             "player2": {
               "first_name": "Dani",
@@ -293,7 +293,7 @@
             "result": "1-0"
           },
           {
-            "match_id": "Webly - Round 4 - M03",
+            "match_id": "Wembly - Round 4 - M02",
             "player1": {
               "first_name": "Iker",
               "last_name": "CASSILLAS ",
@@ -308,19 +308,39 @@
               "date_of_birth": "01/06/1985",
               "chess_id": "AA002",
               "opponents": [],
-              "score": 1
+              "score": 2.5
             },
-            "result": "1-0"
+            "result": "0-1"
           },
           {
-            "match_id": "Webly - Round 4 - M04",
+            "match_id": "Wembly - Round 4 - M03",
             "player1": {
-              "first_name": "Luka",
-              "last_name": "MODRIC",
-              "date_of_birth": "01/01/1984",
-              "chess_id": "AA007",
+              "first_name": "Angel",
+              "last_name": "DI MARIA",
+              "date_of_birth": "01/01/1985",
+              "chess_id": "AA006",
               "opponents": [],
-              "score": 1
+              "score": 1.5
+            },
+            "player2": {
+              "first_name": "Masut",
+              "last_name": "OZEL",
+              "date_of_birth": "01/01/1982",
+              "chess_id": "AA004",
+              "opponents": [],
+              "score": 1.5
+            },
+            "result": "0.5-0.5"
+          },
+          {
+            "match_id": "Wembly - Round 4 - M04",
+            "player1": {
+              "first_name": "Cristiano",
+              "last_name": "RONALDO",
+              "date_of_birth": "01/05/1984",
+              "chess_id": "AA001",
+              "opponents": [],
+              "score": 2.0
             },
             "player2": {
               "first_name": "Xabi",
@@ -328,7 +348,7 @@
               "date_of_birth": "01/05/1981",
               "chess_id": "AA005",
               "opponents": [],
-              "score": 0
+              "score": 0.5
             },
             "result": "1-0"
           }
@@ -342,12 +362,12 @@
         "last_name": "RONALDO",
         "date_of_birth": "01/05/1984",
         "opponents": [
-          "AA005",
+          "AA008",
+          "AA002",
           "AA006",
-          "AA003",
-          "AA008"
+          "AA005"
         ],
-        "score": 3
+        "score": 2.0
       },
       {
         "chess_id": "AA002",
@@ -355,11 +375,12 @@
         "last_name": "RAMOS",
         "date_of_birth": "01/06/1985",
         "opponents": [
-          "AA004",
+          "AA006",
+          "AA001",
           "AA005",
           "AA003"
         ],
-        "score": 1
+        "score": 2.5
       },
       {
         "chess_id": "AA003",
@@ -367,9 +388,9 @@
         "last_name": "CASSILLAS ",
         "date_of_birth": "01/01/1980",
         "opponents": [
+          "AA004",
           "AA008",
           "AA007",
-          "AA001",
           "AA002"
         ],
         "score": 2
@@ -380,12 +401,12 @@
         "last_name": "OZEL",
         "date_of_birth": "01/01/1982",
         "opponents": [
-          "AA002",
+          "AA003",
+          "AA005",
           "AA008",
-          "AA007",
           "AA006"
         ],
-        "score": 2
+        "score": 1.5
       },
       {
         "chess_id": "AA005",
@@ -393,11 +414,12 @@
         "last_name": "ALONSO",
         "date_of_birth": "01/05/1981",
         "opponents": [
-          "AA001",
+          "AA007",
+          "AA004",
           "AA002",
-          "AA007"
+          "AA001"
         ],
-        "score": 0
+        "score": 0.5
       },
       {
         "chess_id": "AA006",
@@ -405,12 +427,12 @@
         "last_name": "DI MARIA",
         "date_of_birth": "01/01/1985",
         "opponents": [
+          "AA002",
           "AA007",
           "AA001",
-          "AA008",
           "AA004"
         ],
-        "score": 4
+        "score": 1.5
       },
       {
         "chess_id": "AA007",
@@ -418,12 +440,12 @@
         "last_name": "MODRIC",
         "date_of_birth": "01/01/1984",
         "opponents": [
+          "AA005",
           "AA006",
           "AA003",
-          "AA004",
-          "AA005"
+          "AA008"
         ],
-        "score": 1
+        "score": 4
       },
       {
         "chess_id": "AA008",
@@ -431,15 +453,91 @@
         "last_name": "CARVAJAL",
         "date_of_birth": "11/01/1992",
         "opponents": [
+          "AA001",
           "AA003",
           "AA004",
-          "AA006",
-          "AA001"
+          "AA007"
         ],
         "score": 2
       }
     ],
-    "event_general_notes": "Roger Fedrer",
+    "event_general_notes": "Rafa Nadal",
+    "event_rounds": 4
+  },
+  {
+    "event_name": "Roland Garos",
+    "event_location": "Paris",
+    "event_start_date": "01-07-2023",
+    "event_end_date": "31-07-2023",
+    "event_current_round": 1,
+    "event_round_list": [],
+    "event_registered_players": [
+      {
+        "chess_id": "AA001",
+        "first_name": "Cristiano",
+        "last_name": "RONALDO",
+        "date_of_birth": "01/05/1984",
+        "opponents": [],
+        "score": 0
+      },
+      {
+        "chess_id": "AA002",
+        "first_name": "Sergio",
+        "last_name": "RAMOS",
+        "date_of_birth": "01/06/1985",
+        "opponents": [],
+        "score": 0
+      },
+      {
+        "chess_id": "AA003",
+        "first_name": "Iker",
+        "last_name": "CASSILLAS ",
+        "date_of_birth": "01/01/1980",
+        "opponents": [],
+        "score": 0
+      },
+      {
+        "chess_id": "AA004",
+        "first_name": "Masut",
+        "last_name": "OZEL",
+        "date_of_birth": "01/01/1982",
+        "opponents": [],
+        "score": 0
+      },
+      {
+        "chess_id": "AA005",
+        "first_name": "Xabi",
+        "last_name": "ALONSO",
+        "date_of_birth": "01/05/1981",
+        "opponents": [],
+        "score": 0
+      },
+      {
+        "chess_id": "AA006",
+        "first_name": "Angel",
+        "last_name": "DI MARIA",
+        "date_of_birth": "01/01/1985",
+        "opponents": [],
+        "score": 0
+      },
+      {
+        "chess_id": "AA007",
+        "first_name": "Luka",
+        "last_name": "MODRIC",
+        "date_of_birth": "01/01/1984",
+        "opponents": [],
+        "score": 0
+      },
+      {
+        "chess_id": "AA008",
+        "first_name": "Dani",
+        "last_name": "CARVAJAL",
+        "date_of_birth": "11/01/1992",
+        "opponents": [],
+        "score": 0
+      }
+    ],
+    "event_general_notes": "Rafa Nadal",
     "event_rounds": 4
   }
 ]
