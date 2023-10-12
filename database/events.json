@@ -928,5 +928,448 @@
     ],
     "event_general_notes": "Rafa Nadal",
     "event_rounds": 4
+  },
+  {
+    "event_name": "New York Open",
+    "event_location": "New York",
+    "event_start_date": "30-09-2023",
+    "event_end_date": "30-10-2023",
+    "event_current_round": 4,
+    "event_round_list": [
+      {
+        "name": "Round 1",
+        "start_time": "12:48 'on' 12-10-2023",
+        "end_time": "12:49 'on' 12-10-2023",
+        "matches": [
+          {
+            "match_id": "New York Open - Round 1 - M01",
+            "player1": {
+              "first_name": "Sergio",
+              "last_name": "RAMOS",
+              "date_of_birth": "01/06/1985",
+              "chess_id": "AA002",
+              "opponents": [],
+              "score": 0
+            },
+            "player2": {
+              "first_name": "Cristiano",
+              "last_name": "RONALDO",
+              "date_of_birth": "01/05/1984",
+              "chess_id": "AA001",
+              "opponents": [],
+              "score": 1
+            },
+            "result": "0-1"
+          },
+          {
+            "match_id": "New York Open - Round 1 - M02",
+            "player1": {
+              "first_name": "Masut",
+              "last_name": "OZEL",
+              "date_of_birth": "01/01/1982",
+              "chess_id": "AA004",
+              "opponents": [],
+              "score": 1
+            },
+            "player2": {
+              "first_name": "Xabi",
+              "last_name": "ALONSO",
+              "date_of_birth": "01/05/1981",
+              "chess_id": "AA005",
+              "opponents": [],
+              "score": 0
+            },
+            "result": "1-0"
+          },
+          {
+            "match_id": "New York Open - Round 1 - M03",
+            "player1": {
+              "first_name": "Luka",
+              "last_name": "MODRIC",
+              "date_of_birth": "01/01/1984",
+              "chess_id": "AA007",
+              "opponents": [],
+              "score": 0
+            },
+            "player2": {
+              "first_name": "Iker",
+              "last_name": "CASSILLAS ",
+              "date_of_birth": "01/01/1980",
+              "chess_id": "AA003",
+              "opponents": [],
+              "score": 1
+            },
+            "result": "0-1"
+          },
+          {
+            "match_id": "New York Open - Round 1 - M04",
+            "player1": {
+              "first_name": "Dani",
+              "last_name": "CARVAJAL",
+              "date_of_birth": "11/01/1992",
+              "chess_id": "AA008",
+              "opponents": [],
+              "score": 1
+            },
+            "player2": {
+              "first_name": "Angel",
+              "last_name": "DI MARIA",
+              "date_of_birth": "01/01/1985",
+              "chess_id": "AA006",
+              "opponents": [],
+              "score": 0
+            },
+            "result": "1-0"
+          }
+        ]
+      },
+      {
+        "name": "Round 2",
+        "start_time": "12:49 'on' 12-10-2023",
+        "end_time": "12:49 'on' 12-10-2023",
+        "matches": [
+          {
+            "match_id": "New York Open - Round 2 - M01",
+            "player1": {
+              "first_name": "Cristiano",
+              "last_name": "RONALDO",
+              "date_of_birth": "01/05/1984",
+              "chess_id": "AA001",
+              "opponents": [],
+              "score": 3
+            },
+            "player2": {
+              "first_name": "Dani",
+              "last_name": "CARVAJAL",
+              "date_of_birth": "11/01/1992",
+              "chess_id": "AA008",
+              "opponents": [],
+              "score": 1
+            },
+            "result": "1-0"
+          },
+          {
+            "match_id": "New York Open - Round 2 - M02",
+            "player1": {
+              "first_name": "Iker",
+              "last_name": "CASSILLAS ",
+              "date_of_birth": "01/01/1980",
+              "chess_id": "AA003",
+              "opponents": [],
+              "score": 2
+            },
+            "player2": {
+              "first_name": "Masut",
+              "last_name": "OZEL",
+              "date_of_birth": "01/01/1982",
+              "chess_id": "AA004",
+              "opponents": [],
+              "score": 3
+            },
+            "result": "0-1"
+          },
+          {
+            "match_id": "New York Open - Round 2 - M03",
+            "player1": {
+              "first_name": "Angel",
+              "last_name": "DI MARIA",
+              "date_of_birth": "01/01/1985",
+              "chess_id": "AA006",
+              "opponents": [],
+              "score": 3
+            },
+            "player2": {
+              "first_name": "Luka",
+              "last_name": "MODRIC",
+              "date_of_birth": "01/01/1984",
+              "chess_id": "AA007",
+              "opponents": [],
+              "score": 1
+            },
+            "result": "1-0"
+          },
+          {
+            "match_id": "New York Open - Round 2 - M04",
+            "player1": {
+              "first_name": "Sergio",
+              "last_name": "RAMOS",
+              "date_of_birth": "01/06/1985",
+              "chess_id": "AA002",
+              "opponents": [],
+              "score": 0
+            },
+            "player2": {
+              "first_name": "Xabi",
+              "last_name": "ALONSO",
+              "date_of_birth": "01/05/1981",
+              "chess_id": "AA005",
+              "opponents": [],
+              "score": 2
+            },
+            "result": "0-1"
+          }
+        ]
+      },
+      {
+        "name": "Round 3",
+        "start_time": "12:49 'on' 12-10-2023",
+        "end_time": "12:49 'on' 12-10-2023",
+        "matches": [
+          {
+            "match_id": "New York Open - Round 3 - M01",
+            "player1": {
+              "first_name": "Cristiano",
+              "last_name": "RONALDO",
+              "date_of_birth": "01/05/1984",
+              "chess_id": "AA001",
+              "opponents": [],
+              "score": 3
+            },
+            "player2": {
+              "first_name": "Masut",
+              "last_name": "OZEL",
+              "date_of_birth": "01/01/1982",
+              "chess_id": "AA004",
+              "opponents": [],
+              "score": 3
+            },
+            "result": "0-1"
+          },
+          {
+            "match_id": "New York Open - Round 3 - M02",
+            "player1": {
+              "first_name": "Angel",
+              "last_name": "DI MARIA",
+              "date_of_birth": "01/01/1985",
+              "chess_id": "AA006",
+              "opponents": [],
+              "score": 3
+            },
+            "player2": {
+              "first_name": "Iker",
+              "last_name": "CASSILLAS ",
+              "date_of_birth": "01/01/1980",
+              "chess_id": "AA003",
+              "opponents": [],
+              "score": 2
+            },
+            "result": "1-0"
+          },
+          {
+            "match_id": "New York Open - Round 3 - M03",
+            "player1": {
+              "first_name": "Dani",
+              "last_name": "CARVAJAL",
+              "date_of_birth": "11/01/1992",
+              "chess_id": "AA008",
+              "opponents": [],
+              "score": 1
+            },
+            "player2": {
+              "first_name": "Xabi",
+              "last_name": "ALONSO",
+              "date_of_birth": "01/05/1981",
+              "chess_id": "AA005",
+              "opponents": [],
+              "score": 2
+            },
+            "result": "0-1"
+          },
+          {
+            "match_id": "New York Open - Round 3 - M04",
+            "player1": {
+              "first_name": "Luka",
+              "last_name": "MODRIC",
+              "date_of_birth": "01/01/1984",
+              "chess_id": "AA007",
+              "opponents": [],
+              "score": 1
+            },
+            "player2": {
+              "first_name": "Sergio",
+              "last_name": "RAMOS",
+              "date_of_birth": "01/06/1985",
+              "chess_id": "AA002",
+              "opponents": [],
+              "score": 0
+            },
+            "result": "1-0"
+          }
+        ]
+      },
+      {
+        "name": "Round 4",
+        "start_time": "12:49 'on' 12-10-2023",
+        "end_time": "12:49 'on' 12-10-2023",
+        "matches": [
+          {
+            "match_id": "New York Open - Round 4 - M01",
+            "player1": {
+              "first_name": "Masut",
+              "last_name": "OZEL",
+              "date_of_birth": "01/01/1982",
+              "chess_id": "AA004",
+              "opponents": [],
+              "score": 3
+            },
+            "player2": {
+              "first_name": "Angel",
+              "last_name": "DI MARIA",
+              "date_of_birth": "01/01/1985",
+              "chess_id": "AA006",
+              "opponents": [],
+              "score": 3
+            },
+            "result": "0-1"
+          },
+          {
+            "match_id": "New York Open - Round 4 - M02",
+            "player1": {
+              "first_name": "Cristiano",
+              "last_name": "RONALDO",
+              "date_of_birth": "01/05/1984",
+              "chess_id": "AA001",
+              "opponents": [],
+              "score": 3
+            },
+            "player2": {
+              "first_name": "Xabi",
+              "last_name": "ALONSO",
+              "date_of_birth": "01/05/1981",
+              "chess_id": "AA005",
+              "opponents": [],
+              "score": 2
+            },
+            "result": "1-0"
+          },
+          {
+            "match_id": "New York Open - Round 4 - M03",
+            "player1": {
+              "first_name": "Dani",
+              "last_name": "CARVAJAL",
+              "date_of_birth": "11/01/1992",
+              "chess_id": "AA008",
+              "opponents": [],
+              "score": 1
+            },
+            "player2": {
+              "first_name": "Iker",
+              "last_name": "CASSILLAS ",
+              "date_of_birth": "01/01/1980",
+              "chess_id": "AA003",
+              "opponents": [],
+              "score": 2
+            },
+            "result": "0-1"
+          }
+        ]
+      }
+    ],
+    "event_registered_players": [
+      {
+        "chess_id": "AA001",
+        "first_name": "Cristiano",
+        "last_name": "RONALDO",
+        "date_of_birth": "01/05/1984",
+        "opponents": [
+          "AA002",
+          "AA008",
+          "AA004",
+          "AA005"
+        ],
+        "score": 3
+      },
+      {
+        "chess_id": "AA002",
+        "first_name": "Sergio",
+        "last_name": "RAMOS",
+        "date_of_birth": "01/06/1985",
+        "opponents": [
+          "AA001",
+          "AA005",
+          "AA007"
+        ],
+        "score": 0
+      },
+      {
+        "chess_id": "AA003",
+        "first_name": "Iker",
+        "last_name": "CASSILLAS ",
+        "date_of_birth": "01/01/1980",
+        "opponents": [
+          "AA007",
+          "AA004",
+          "AA006",
+          "AA008"
+        ],
+        "score": 2
+      },
+      {
+        "chess_id": "AA004",
+        "first_name": "Masut",
+        "last_name": "OZEL",
+        "date_of_birth": "01/01/1982",
+        "opponents": [
+          "AA005",
+          "AA003",
+          "AA001",
+          "AA006"
+        ],
+        "score": 3
+      },
+      {
+        "chess_id": "AA005",
+        "first_name": "Xabi",
+        "last_name": "ALONSO",
+        "date_of_birth": "01/05/1981",
+        "opponents": [
+          "AA004",
+          "AA002",
+          "AA008",
+          "AA001"
+        ],
+        "score": 2
+      },
+      {
+        "chess_id": "AA006",
+        "first_name": "Angel",
+        "last_name": "DI MARIA",
+        "date_of_birth": "01/01/1985",
+        "opponents": [
+          "AA008",
+          "AA007",
+          "AA003",
+          "AA004"
+        ],
+        "score": 3
+      },
+      {
+        "chess_id": "AA007",
+        "first_name": "Luka",
+        "last_name": "MODRIC",
+        "date_of_birth": "01/01/1984",
+        "opponents": [
+          "AA003",
+          "AA006",
+          "AA002"
+        ],
+        "score": 1
+      },
+      {
+        "chess_id": "AA008",
+        "first_name": "Dani",
+        "last_name": "CARVAJAL",
+        "date_of_birth": "11/01/1992",
+        "opponents": [
+          "AA006",
+          "AA001",
+          "AA005",
+          "AA003"
+        ],
+        "score": 1
+      }
+    ],
+    "event_general_notes": "Djoko",
+    "event_rounds": 4
   }
 ]

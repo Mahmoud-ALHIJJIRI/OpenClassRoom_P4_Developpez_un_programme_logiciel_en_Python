@@ -102,5 +102,13 @@
     "chess_id": "AA013",
     "score": 0,
     "opponents": []
+  },
+  {
+    "first_name": "Talia",
+    "last_name": "ALHIJJIRI",
+    "date_of_birth": "14/02/2019",
+    "chess_id": "AA014",
+    "score": 0,
+    "opponents": []
   }
 ]
