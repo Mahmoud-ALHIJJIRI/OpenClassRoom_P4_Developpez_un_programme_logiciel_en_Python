@@ -1,0 +1,4 @@
+[flake8]
+max-line-length = 119
+exclude = .idea,__pycache__,database,flake8_report,Images,venv,*.gitignore,*.md,requirements.txt
+
